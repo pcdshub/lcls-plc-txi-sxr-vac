@@ -4,7 +4,7 @@ python: 3.7
 env:
   global:
     # doctr generated secure variable for documentation upload
-    - secure: "<your secure here>"
+    - secure: "pNnHw5ecwXyDWj214u6ZUeWd7FOuRnyv75cL3HMUrrcH7/t39+rMGgulUptGW0Ja1GbLldhVvelDXjrM8Li/xb9IhMVerCFuV1EnZEEtgk+2k8d4kS8DUxfPHZDRLJCCcCAWl2O/Q6Zm4cK7IoT5jb8R6bW5HZS//Kft4LprmrfdwqU2jdgvy4JqXtnAxN/JTp/e+EbB4QPTHZH0DetUThsOwf8tYU+6q0wZmeJUL1yPmNS2n+QdStx49GLIygQUFLOWipy2EWCfQmLzYfJUd6Yy3CfEEQZFCXKB0n5BJsaEufnjneqimbfZeixkpGni+h3Uty6zkJNAAq8Teow0ggSqmu+WzBsI/P33wsuseOIy/alrL3DOzA7+BtwsDnEBGBxML5Mb2naZ1I3MbYZgH3xNNYYWapJUGc5tfFIzNwKuMrwhGWODp8NgyoIxmHV/MP7RkQXEtfutu/rYuHkJ2vy4tXYkJlqJlA4eE6bFzQWX660quBt9NHJMN1tpqH4c3yGsg30kSxUsx/jSbniSh8Ja4GABwuELjCX00ZV8mkNFsgebAR0hC6bvo9x4pqEXOWgkhwQZFlh5ml1EgERGLjPocFxdynUptIllIcFhQf8WgUH53jGibHF6hQO7elOgpMe7lwvNopN3/Iq8UsV6aXKbV9zLaYDai8Jvwb+lJ98="
     - TWINCAT_STYLE_EXCLUDE=
     # If using a custom version of the CI helpers, change the following in
     # addition to the `import` block elow:
