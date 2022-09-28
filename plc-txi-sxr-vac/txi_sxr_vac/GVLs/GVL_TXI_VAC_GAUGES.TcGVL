@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_TXI_VAC_GAUGES" Id="{5dee7415-fe65-440d-a495-853084bfeb20}">
+    <Declaration><![CDATA[VAR_GLOBAL
+//B940-008-K0S15-PNL-02 (FEE)
+{attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:01 '}
+fb_PC1K3_GCC_01: FB_MKS500;
+
+//B940-008-K3S23-PNL-1 (FEE)
+{attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+fb_TV1K3_GCC_01: FB_MKS500;
+{attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+fb_TV1K3_GPI_01: FB_MKS275;
+
+//B940-008-K3S34-PNL-1 (FEE)
+{attribute 'pytmc' := ' pv: TXI:ST1L3:GCC:01 '}
+fb_ST1K3_GCC_01: FB_MKS500;
+{attribute 'pytmc' := ' pv: TXI:ST1L3:GCC:01 '}
+fb_ST1K3_GPI_01: FB_MKS275;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
