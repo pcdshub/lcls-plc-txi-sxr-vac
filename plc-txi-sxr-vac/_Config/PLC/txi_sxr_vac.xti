@@ -141,4 +141,28 @@
 			</TaskPouOids>
 		</Instance>
 	</Project>
+	<Mappings>
+		<OwnerA Name="txi_sxr_vac Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_iPRESS_R" VarB="PC1K3_GCC_01^Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS" VarB="PC1K3_GCC-01^Output" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_iPRESS_R" VarB="TV1K3_GCC_01^Value"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01.i_iPRESS_R" VarB="TV1K3_GPI_01^Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS" VarB="TV1K3_GCC_01^Output" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)">
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_iPRESS_R" VarB="ST1L3_GCC_01^Value"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01.i_iPRESS_R" VarB="ST1K3_GPI_01^Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^FEE (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)">
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS" VarB="ST1K3_GCC-01^Output" Size="1"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmItem>
