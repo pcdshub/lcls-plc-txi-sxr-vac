@@ -3,9 +3,9 @@
   <GVL Name="GVL_TXI_VAC_VARIABLES" Id="{99fa0854-e0c4-4ebb-be84-cb1442f0b632}">
     <Declaration><![CDATA[VAR_GLOBAL
 {attribute 'pytmc' := 'pv: TXI:SXR:FEE:VAC:OVRDON;
-	field: ZNAM Override OFF; 	
+    field: ZNAM Override OFF;
     field: ONAM Override ON;
- 	io: io;	
+     io: io;
 '}
 xSystemOverrideMode1 : BOOL; (* Global system override for the prototype section*)
 
