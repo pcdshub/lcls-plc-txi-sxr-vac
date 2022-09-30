@@ -34,7 +34,7 @@
 			<Fmmu>0000000000000000801100010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 			<BootStrapData>0010f400f410f400</BootStrapData>
-			<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+			<Pdo Name="TV1K3_PIP_01" Index="#x1a00" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a01</ExcludePdo>
 				<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
 					<Type>BIT</Type>
@@ -82,7 +82,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Type>INT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
+			<Pdo Name="ST1K3_PIP_01" Index="#x1a02" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a03</ExcludePdo>
 				<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
 					<Type>BIT</Type>
@@ -130,7 +130,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Type>INT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="AI Standard Channel 3" Index="#x1a04" Flags="#x0010" SyncMan="3">
+			<Pdo Name="PC1K3_PIP_01" Index="#x1a04" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a05</ExcludePdo>
 				<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
 					<Type>BIT</Type>
@@ -178,7 +178,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Type>INT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="AI Standard Channel 4" Index="#x1a06" Flags="#x0010" SyncMan="3">
+			<Pdo Name="PC1K3_PIP_02" Index="#x1a06" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a07</ExcludePdo>
 				<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
 					<Type>BIT</Type>

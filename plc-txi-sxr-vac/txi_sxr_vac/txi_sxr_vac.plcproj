@@ -21,6 +21,14 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
+    <Compile Include="GVLs\GVL_TXI_VAC_PUMPS.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="GVLs\GVL_TXI_VAC_VARIABLES.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +36,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_TXI_VAC_GAUGES.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_TXI_VAC_PUMPS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

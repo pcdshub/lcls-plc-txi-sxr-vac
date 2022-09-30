@@ -22,7 +22,18 @@ fb_TV1K3_GCC_01(PG := fb_TV1K3_GPI_01.PG, bEP := TRUE);
 
 //B940-008-K3S34-PNL-1 (FEE)
 fb_ST1K3_GPI_01(PG =>);
-fb_ST1K3_GCC_01(PG := fb_ST1K3_GPI_01.PG, bEP := TRUE);]]></ST>
+fb_ST1K3_GCC_01(PG := fb_ST1K3_GPI_01.PG, bEP := TRUE);
+
+//B950-100H1-K3S1-PNL-1 (H1.1)
+fb_TV2K3_GPI_01(PG =>);
+fb_TV2K3_GCC_01(PG := fb_TV2K3_GPI_01.PG, bEP := TRUE);
+
+fb_TV3K3_GPI_01(PG =>);
+fb_TV3K3_GCC_01(PG := fb_TV2K3_GCC_01.PG, bEP := TRUE);
+
+//B950-100-K3S3-DRL-1 (H1.1)
+fb_TV4K3_GPI_01(PG =>);
+fb_TV4K3_GCC_01(PG := fb_TV4K3_GCC_01.PG, bEP := TRUE);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
