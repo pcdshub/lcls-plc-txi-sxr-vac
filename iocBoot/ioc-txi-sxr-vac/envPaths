@@ -1,0 +1,2 @@
+epicsEnvSet("IOC_TOP", "/c/Users/jozamudi/Documents/lcls-plc-txi-sxr-vac/iocBoot/ioc-txi-sxr-vac")
+epicsEnvSet("IOC_DATA", "/reg/d/iocData")
