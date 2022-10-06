@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_TXI_VAC_GAUGES" Id="{5dee7415-fe65-440d-a495-853084bfeb20}">
+    <Declaration><![CDATA[VAR_GLOBAL
+
+//B940-008-K0S15-PNL-02 (FEE)
+{attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  '}
+{attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC-01^Output '}
+fb_PC1K3_GCC_01: FB_MKS500;
+
+//B940-008-K3S23-PNL-1 (FEE)
+{attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    '}
+{attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)^TV1K3_GCC_01^Output  '}
+fb_TV1K3_GCC_01: FB_MKS500;
+{attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    '}
+fb_TV1K3_GPI_01: FB_MKS275;
+
+//B940-008-K3S34-PNL-1 (FEE)
+{attribute 'pytmc' := ' pv: TXI:ST1L3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   '}
+{attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)^ST1K3_GCC-01^Output  '}
+fb_ST1K3_GCC_01: FB_MKS500;
+{attribute 'pytmc' := ' pv: TXI:ST1L3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   '}
+fb_ST1K3_GPI_01: FB_MKS275;
+
+//B950-100H1-K3S1-PNL-1 (H1.1)
+fb_TV2K3_GCC_01: FB_MKS500;
+fb_TV2K3_GPI_01: FB_MKS275;
+
+fb_TV3K3_GCC_01: FB_MKS500;
+fb_TV3K3_GPI_01: FB_MKS275;
+
+//B950-100-K3S3-DRL-1 (H1.1)
+fb_TV4K3_GCC_01: FB_MKS500;
+fb_TV4K3_GPI_01: FB_MKS275;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

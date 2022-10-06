@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <POU Name="PRG_TXI_VAC_GAUGES" Id="{da6b13e3-aa05-4b4e-8f08-7996f3ea8dfb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_TXI_VAC_GAUGES
+VAR
+dummy_gauge : ST_VG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//beamline dummy gauge
+dummy_gauge.xPRESS_OK := TRUE;
+dummy_gauge.xAT_VAC := TRUE;
+dummy_gauge.eState := ValidLo;
+dummy_gauge.rPRESS := 1e-4;
+
+//B940-008-K0S15-PNL-02 (FEE)
+fb_PC1K3_GCC_01(PG := dummy_gauge, bEP := TRUE);
+
+//B940-008-K3S23-PNL-1 (FEE)
+fb_TV1K3_GPI_01(PG =>);
+fb_TV1K3_GCC_01(PG := fb_TV1K3_GPI_01.PG, bEP := TRUE);
+
+//B940-008-K3S34-PNL-1 (FEE)
+fb_ST1K3_GPI_01(PG =>);
+fb_ST1K3_GCC_01(PG := fb_ST1K3_GPI_01.PG, bEP := TRUE);
+
+//B950-100H1-K3S1-PNL-1 (H1.1)
+fb_TV2K3_GPI_01(PG =>);
+fb_TV2K3_GCC_01(PG := fb_TV2K3_GPI_01.PG, bEP := TRUE);
+
+fb_TV3K3_GPI_01(PG =>);
+fb_TV3K3_GCC_01(PG := fb_TV2K3_GCC_01.PG, bEP := TRUE);
+
+//B950-100-K3S3-DRL-1 (H1.1)
+fb_TV4K3_GPI_01(PG =>);
+fb_TV4K3_GCC_01(PG := fb_TV4K3_GCC_01.PG, bEP := TRUE);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
