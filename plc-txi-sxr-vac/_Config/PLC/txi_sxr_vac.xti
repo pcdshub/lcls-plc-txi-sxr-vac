@@ -259,11 +259,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
-					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
 					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
@@ -274,12 +269,17 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
 					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
+					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
 					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
@@ -294,16 +294,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO</Name>
-					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO</Name>
 					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
@@ -314,12 +304,22 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO</Name>
+					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO</Name>
 					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
+					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO</Name>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO</Name>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
