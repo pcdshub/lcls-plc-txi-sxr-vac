@@ -15,6 +15,10 @@
     <Implicit_KindOfTask>{a7ca405d-8b11-422c-ad11-deecd7ed2ce2}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{d1d5e316-4c38-4838-99a0-e66a393c7aa4}</Implicit_Jitter_Distribution>
     <LibraryReferences>{9e5a1346-2b74-41c9-91b9-f90b16d5794c}</LibraryReferences>
+    <Company>SLAC</Company>
+    <Released>false</Released>
+    <Title>txi_sxr_vac</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL_TXI_VAC_GAUGES.TcGVL">
