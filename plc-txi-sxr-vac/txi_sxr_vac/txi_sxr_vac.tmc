@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{E074F518-AA12-CF61-7C25-B454DE3AE221}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{662CD8E3-653A-1726-DC0D-4BFBA90C8F24}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -210,31 +210,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80362992</GetCodeOffs>
+        <GetCodeOffs>80351856</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80363024</GetCodeOffs>
+        <GetCodeOffs>80351888</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80363032</GetCodeOffs>
+        <GetCodeOffs>80351896</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80363016</GetCodeOffs>
+        <GetCodeOffs>80351880</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80363028</GetCodeOffs>
+        <GetCodeOffs>80351892</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -1488,15 +1488,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80362932</GetCodeOffs>
-        <SetCodeOffs>80362956</SetCodeOffs>
+        <GetCodeOffs>80351796</GetCodeOffs>
+        <SetCodeOffs>80351820</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80362968</GetCodeOffs>
-        <SetCodeOffs>80362980</SetCodeOffs>
+        <GetCodeOffs>80351832</GetCodeOffs>
+        <SetCodeOffs>80351844</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>__setbCutInstancePathByLastInst</Name>
@@ -1794,31 +1794,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>80363080</GetCodeOffs>
+        <GetCodeOffs>80351944</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80363060</GetCodeOffs>
+        <GetCodeOffs>80351924</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80363148</GetCodeOffs>
+        <GetCodeOffs>80352012</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80363108</GetCodeOffs>
+        <GetCodeOffs>80351972</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80363152</GetCodeOffs>
+        <GetCodeOffs>80352016</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>EqualsToEventClass</Name>
@@ -2428,7 +2428,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80363180</GetCodeOffs>
+        <GetCodeOffs>80352044</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>SetJsonAttribute</Name>
@@ -15650,6 +15650,1063 @@ These features aren't disabled, they just aren't used, think child/parent classe
       </Properties>
     </DataType>
     <DataType>
+      <Name Namespace="Tc2_System">ADSWRITE</Name>
+      <Comment> ADS write command. </Comment>
+      <BitSize>1216</BitSize>
+      <SubItem>
+        <Name>NETID</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <Comment> Ams net id </Comment>
+        <BitSize>192</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>PORT</Name>
+        <Type Namespace="Tc2_System">T_AmsPort</Type>
+        <Comment> Ads communication port </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXGRP</Name>
+        <Type>UDINT</Type>
+        <Comment> Index group </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXOFFS</Name>
+        <Type>UDINT</Type>
+        <Comment> Index offset </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>LEN</Name>
+        <Type>UDINT</Type>
+        <Comment> Max. number of data bytes to write (LEN &lt;= max. size of source buffer) </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SRCADDR</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        <Comment> Pointer to source buffer </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>TcIgnorePersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>WRITE</Name>
+        <Type>BOOL</Type>
+        <Comment> Rising edge starts command execution </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>384</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TMOUT</Name>
+        <Type>TIME</Type>
+        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>416</BitOffs>
+        <Default>
+          <Value>5000</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>BUSY</Name>
+        <Type>BOOL</Type>
+        <Comment> Busy flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>448</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERR</Name>
+        <Type>BOOL</Type>
+        <Comment> Error flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>456</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERRID</Name>
+        <Type>UDINT</Type>
+        <Comment> ADS error code </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>480</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Method>
+        <Name>__GetInterfaceReference</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>nInterfaceId</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>__GetInterfacePointer</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>hide_all_locals</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_Utilities">E_PersistentMode</Name>
+      <BitSize>16</BitSize>
+      <BaseType>INT</BaseType>
+      <Comment> Write persistent data control modes </Comment>
+      <EnumInfo>
+        <Text>SPDM_2PASS</Text>
+        <Enum>0</Enum>
+      </EnumInfo>
+      <EnumInfo>
+        <Text>SPDM_VAR_BOOST</Text>
+        <Enum>1</Enum>
+      </EnumInfo>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General.Tc2_Utilities">WritePersistentData</Name>
+      <Comment> This function block initiatializes storage of the persistent data from the PLC program </Comment>
+      <BitSize>1600</BitSize>
+      <SubItem>
+        <Name>NETID</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <Comment> TwinCAT network address (ams net id) </Comment>
+        <BitSize>192</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>PORT</Name>
+        <Type>UINT</Type>
+        <Comment> Contains the ADS port number of the PLC run-time system whose persistent data is to be stored (851, 852...)</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>START</Name>
+        <Type>BOOL</Type>
+        <Comment> Rising edge on this input activates the fb execution </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>240</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TMOUT</Name>
+        <Type>TIME</Type>
+        <Comment> Max fb execution time </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Default>
+          <Value>5000</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>BUSY</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERR</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>296</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERRID</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbAdsWrite</Name>
+        <Type Namespace="Tc2_System">ADSWRITE</Type>
+        <BitSize>1216</BitSize>
+        <BitOffs>352</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.IDXGRP</Name>
+            <Value>139460625</Value>
+          </SubItem>
+          <SubItem>
+            <Name>.IDXOFFS</Name>
+            <Value>0</Value>
+          </SubItem>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>conditionalshow</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>MODE</Name>
+        <Type Namespace="LCLS_General.Tc2_Utilities">E_PersistentMode</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>1568</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>conditionalshow</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Method>
+        <Name>__GetInterfaceReference</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>nInterfaceId</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>__GetInterfacePointer</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>conditionalshow_all_locals</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum">FB_GaugeBase</Name>
+      <BitSize>84928</BitSize>
+      <SubItem>
+        <Name>fbLogger</Name>
+        <Type Namespace="LCLS_General">FB_LogMessage</Type>
+        <Comment>Logging </Comment>
+        <BitSize>81600</BitSize>
+        <BitOffs>64</BitOffs>
+        <Default>
+          <SubItem>
+            <Name>.eSubsystem</Name>
+            <Value>1</Value>
+          </SubItem>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>ePrevState</Name>
+        <Type Namespace="LCLS_Vacuum">E_PressureState</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>81664</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tErrorPresent</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81696</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tAction</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <Comment> Primary action of this device (OPN_DO, etc.)</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>81760</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tOverrideActivated</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81824</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tState</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>81888</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>sPath</Name>
+        <Type>STRING(80)</Type>
+        <BitSize>648</BitSize>
+        <BitOffs>81952</BitOffs>
+        <Properties>
+          <Property>
+            <Name>instance-path</Name>
+          </Property>
+          <Property>
+            <Name>noinit</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bRestorePersistentData</Name>
+        <Type>BOOL</Type>
+        <Comment> For Persistent Data</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>82600</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>stateTimer</Name>
+        <Type Namespace="Tc2_Standard">TON</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>82624</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbGetCurTaskIdx</Name>
+        <Type Namespace="Tc2_System">GETCURTASKINDEX</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>82848</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbWritePersistentData</Name>
+        <Type Namespace="LCLS_General.Tc2_Utilities">WritePersistentData</Type>
+        <BitSize>1600</BitSize>
+        <BitOffs>82976</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tRecover</Name>
+        <Type Namespace="Tc2_Standard">TON</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>84576</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>rVAC_SP</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>84800</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>rPRO_SP</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>84832</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>rHYS_PR</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>84864</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Method>
+        <Name>__GetInterfacePointer</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>__GetInterfaceReference</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>nInterfaceId</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>reflection</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum">FB_MKS500</Name>
+      <Comment> This function is for the Cold Cathode MKS 500. 
+
+If connected to Beckhoff EP boxes. Set the EP bit to TRUE, this is necessary for the 
+MKS500-to-EP box interface because the EP boxes do not natively support the 5v IO 
+signals on the MKS500 gauge.
+
+A setup process is required for the MKS500 to be usable.
+See here: https://confluence.slac.stanford.edu/display/PCDS/MKS+500+-+Cold+Cathode
+
+This function provides ILK and Set Point Protection for the Cold Cathode.
+</Comment>
+      <BitSize>88000</BitSize>
+      <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
+      <SubItem>
+        <Name>PG</Name>
+        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
+        <BitSize>1056</BitSize>
+        <BitOffs>84928</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bEP</Name>
+        <Type>BOOL</Type>
+        <Comment> Set to True if This Gauge is connected to EP BOX and not EL Terminals</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>85984</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>tRecoverDelay</Name>
+        <Type>TIME</Type>
+        <Comment>Delay Time after the first cycle to start the device. Default is 600S</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86016</BitOffs>
+        <Default>
+          <Value>600000</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IG</Name>
+        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
+        <BitSize>1056</BitSize>
+        <BitOffs>86048</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+    pv: 
+	</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>rV</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87104</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>GaugeTurnOnTmr</Name>
+        <Type Namespace="Tc2_Standard">TON</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>87136</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>tStartupTimer</Name>
+        <Type Namespace="Tc2_Standard">TON</Type>
+        <BitSize>224</BitSize>
+        <BitOffs>87360</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iTermBits</Name>
+        <Type>UINT</Type>
+        <Comment> The terminal's maximum value in bits</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>87584</BitOffs>
+        <Default>
+          <Value>32767</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>i_iPRESS_R</Name>
+        <Type>INT</Type>
+        <Comment> Controls and I/Os</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>87600</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>q_xHV_DIS</Name>
+        <Type>BOOL</Type>
+        <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>87616</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_xHV_ON</Name>
+        <Type>BOOL</Type>
+        <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>87624</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>i_xDisc_Active</Name>
+        <Type>BOOL</Type>
+        <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>87632</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>binit</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>87640</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>pBase</Name>
+        <Type>REAL</Type>
+        <Comment>default curve base pressure is 1E-10. Confusing since can't actually read that low using analog out.</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>87648</BitOffs>
+        <Default>
+          <Value>1E-10</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>vBase</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87680</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>vDisconnected</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87712</BitOffs>
+        <Default>
+          <Value>0.5</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>vSlope</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87744</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>vGaugeOff</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87776</BitOffs>
+        <Default>
+          <Value>9.8</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>vNoDischarge</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87808</BitOffs>
+        <Default>
+          <Value>9.3</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>MinPressure</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87840</BitOffs>
+        <Default>
+          <Value>1E-10</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>cDefaultPressure</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87872</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDeadband</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>87904</BitOffs>
+        <Default>
+          <Value>0.3</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bWasOn</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>87936</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bAutoRecover</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>87944</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bAutoRecoverWrite</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>87952</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcPersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Action>
+        <Name>ACT_Logger</Name>
+      </Action>
+      <Action>
+        <Name>IO</Name>
+      </Action>
+      <Action>
+        <Name>ACT_Recover</Name>
+      </Action>
+      <Action>
+        <Name>ACT_Persistent</Name>
+      </Action>
+      <Method>
+        <Name>__GetInterfaceReference</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>nInterfaceId</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>M_HVE</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>enable</Name>
+          <Comment> set to true to enable, false to disable;</Comment>
+          <Type>BOOL</Type>
+          <BitSize>8</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>__GetInterfacePointer</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>M_SetBits</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>TermBits</Name>
+          <Comment> The terminal's maximum value in bits</Comment>
+          <Type>UINT</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>M_Recover</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+      </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum">FB_MKS275</Name>
+      <Comment> This function block is used to provide protection and automatic turn on of ion gauges,
+ it also manages the turn on of the AT_VAC boolean, and checks to make sure the pressure is good 
+ For MKS 275 mini-convectron </Comment>
+      <BitSize>86336</BitSize>
+      <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
+      <SubItem>
+        <Name>PG</Name>
+        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
+        <BitSize>1056</BitSize>
+        <BitOffs>84928</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+    pv: 
+	</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>V</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>85984</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>iTermBits</Name>
+        <Type>UINT</Type>
+        <Comment> The terminal's maximum value in bits</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>86016</BitOffs>
+        <Default>
+          <Value>32767</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>Vlowest</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86048</BitOffs>
+        <Default>
+          <Value>10</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>i_iPRESS_R</Name>
+        <Type>INT</Type>
+        <Comment> input Pressure // Link to analog Input</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>86080</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>MinPressure</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86112</BitOffs>
+        <Default>
+          <Value>0.0001</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDeadband</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86144</BitOffs>
+        <Default>
+          <Value>0.05</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rValidLoBoundary</Name>
+        <Type>REAL</Type>
+        <Comment>  0.375V as per manual page 27</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86176</BitOffs>
+        <Default>
+          <Value>0.375</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rValidHiBoundary</Name>
+        <Type>REAL</Type>
+        <Comment> 5.534; // manual page 27</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86208</BitOffs>
+        <Default>
+          <Value>5.659</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDisconnectedBoundary</Name>
+        <Type>REAL</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>86240</BitOffs>
+        <Default>
+          <Value>0.3</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>rDefaultVAC_SP</Name>
+        <Type>REAL</Type>
+        <Comment>Default set point 50 mT</Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>86272</BitOffs>
+        <Default>
+          <Value>0.05</Value>
+        </Default>
+      </SubItem>
+      <Action>
+        <Name>ACT_Logger</Name>
+      </Action>
+      <Action>
+        <Name>ACT_Persistent</Name>
+      </Action>
+      <Action>
+        <Name>IO</Name>
+      </Action>
+      <Method>
+        <Name>__GetInterfacePointer</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>M_SetBits</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>TermBits</Name>
+          <Comment> The terminal's maximum value in bits</Comment>
+          <Type>UINT</Type>
+          <BitSize>16</BitSize>
+        </Parameter>
+      </Method>
+      <Method>
+        <Name>__GetInterfaceReference</Name>
+        <ReturnType>BOOL</ReturnType>
+        <ReturnBitSize>8</ReturnBitSize>
+        <Parameter>
+          <Name>nInterfaceId</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+        <Parameter>
+          <Name>pRef</Name>
+          <Type PointerTo="2">DWORD</Type>
+          <BitSize>32</BitSize>
+        </Parameter>
+      </Method>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>no_check</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name Namespace="LCLS_Vacuum">E_PumpState</Name>
       <BitSize>16</BitSize>
       <BaseType>INT</BaseType>
@@ -16130,373 +17187,6 @@ These features aren't disabled, they just aren't used, think child/parent classe
           </Property>
         </Properties>
       </SubItem>
-    </DataType>
-    <DataType>
-      <Name Namespace="Tc2_System">ADSWRITE</Name>
-      <Comment> ADS write command. </Comment>
-      <BitSize>1216</BitSize>
-      <SubItem>
-        <Name>NETID</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <Comment> Ams net id </Comment>
-        <BitSize>192</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>PORT</Name>
-        <Type Namespace="Tc2_System">T_AmsPort</Type>
-        <Comment> Ads communication port </Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXGRP</Name>
-        <Type>UDINT</Type>
-        <Comment> Index group </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXOFFS</Name>
-        <Type>UDINT</Type>
-        <Comment> Index offset </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>LEN</Name>
-        <Type>UDINT</Type>
-        <Comment> Max. number of data bytes to write (LEN &lt;= max. size of source buffer) </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>SRCADDR</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
-        <Comment> Pointer to source buffer </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>352</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-          <Property>
-            <Name>TcIgnorePersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>WRITE</Name>
-        <Type>BOOL</Type>
-        <Comment> Rising edge starts command execution </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>384</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>TMOUT</Name>
-        <Type>TIME</Type>
-        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>416</BitOffs>
-        <Default>
-          <Value>5000</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>BUSY</Name>
-        <Type>BOOL</Type>
-        <Comment> Busy flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>448</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERR</Name>
-        <Type>BOOL</Type>
-        <Comment> Error flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>456</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERRID</Name>
-        <Type>UDINT</Type>
-        <Comment> ADS error code </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>480</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Method>
-        <Name>__GetInterfaceReference</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>nInterfaceId</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>__GetInterfacePointer</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>hide_all_locals</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_General.Tc2_Utilities">E_PersistentMode</Name>
-      <BitSize>16</BitSize>
-      <BaseType>INT</BaseType>
-      <Comment> Write persistent data control modes </Comment>
-      <EnumInfo>
-        <Text>SPDM_2PASS</Text>
-        <Enum>0</Enum>
-      </EnumInfo>
-      <EnumInfo>
-        <Text>SPDM_VAR_BOOST</Text>
-        <Enum>1</Enum>
-      </EnumInfo>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_General.Tc2_Utilities">WritePersistentData</Name>
-      <Comment> This function block initiatializes storage of the persistent data from the PLC program </Comment>
-      <BitSize>1600</BitSize>
-      <SubItem>
-        <Name>NETID</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <Comment> TwinCAT network address (ams net id) </Comment>
-        <BitSize>192</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>PORT</Name>
-        <Type>UINT</Type>
-        <Comment> Contains the ADS port number of the PLC run-time system whose persistent data is to be stored (851, 852...)</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>START</Name>
-        <Type>BOOL</Type>
-        <Comment> Rising edge on this input activates the fb execution </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>240</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>TMOUT</Name>
-        <Type>TIME</Type>
-        <Comment> Max fb execution time </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Default>
-          <Value>5000</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>BUSY</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERR</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>296</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERRID</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fbAdsWrite</Name>
-        <Type Namespace="Tc2_System">ADSWRITE</Type>
-        <BitSize>1216</BitSize>
-        <BitOffs>352</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.IDXGRP</Name>
-            <Value>139460625</Value>
-          </SubItem>
-          <SubItem>
-            <Name>.IDXOFFS</Name>
-            <Value>0</Value>
-          </SubItem>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>conditionalshow</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>MODE</Name>
-        <Type Namespace="LCLS_General.Tc2_Utilities">E_PersistentMode</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>1568</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>conditionalshow</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Method>
-        <Name>__GetInterfaceReference</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>nInterfaceId</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>__GetInterfacePointer</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>conditionalshow_all_locals</Name>
-        </Property>
-      </Properties>
     </DataType>
     <DataType>
       <Name Namespace="LCLS_Vacuum">FB_PIP_Gamma</Name>
@@ -24096,8 +24786,8 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80367752</GetCodeOffs>
-        <SetCodeOffs>80367760</SetCodeOffs>
+        <GetCodeOffs>80356708</GetCodeOffs>
+        <SetCodeOffs>80356716</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="44">__getnTimestamp</Name>
@@ -25351,31 +26041,31 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80367316</GetCodeOffs>
+        <GetCodeOffs>80356272</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80367348</GetCodeOffs>
+        <GetCodeOffs>80356304</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80367352</GetCodeOffs>
+        <GetCodeOffs>80356308</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80367340</GetCodeOffs>
+        <GetCodeOffs>80356296</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80367360</GetCodeOffs>
+        <GetCodeOffs>80356316</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -28462,696 +29152,6 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_GaugeBase</Name>
-      <BitSize>84928</BitSize>
-      <SubItem>
-        <Name>fbLogger</Name>
-        <Type Namespace="LCLS_General">FB_LogMessage</Type>
-        <Comment>Logging </Comment>
-        <BitSize>81600</BitSize>
-        <BitOffs>64</BitOffs>
-        <Default>
-          <SubItem>
-            <Name>.eSubsystem</Name>
-            <Value>1</Value>
-          </SubItem>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>ePrevState</Name>
-        <Type Namespace="LCLS_Vacuum">E_PressureState</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>81664</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tErrorPresent</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>81696</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tAction</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <Comment> Primary action of this device (OPN_DO, etc.)</Comment>
-        <BitSize>64</BitSize>
-        <BitOffs>81760</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tOverrideActivated</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>81824</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tState</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>81888</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>sPath</Name>
-        <Type>STRING(80)</Type>
-        <BitSize>648</BitSize>
-        <BitOffs>81952</BitOffs>
-        <Properties>
-          <Property>
-            <Name>instance-path</Name>
-          </Property>
-          <Property>
-            <Name>noinit</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bRestorePersistentData</Name>
-        <Type>BOOL</Type>
-        <Comment> For Persistent Data</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>82600</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>stateTimer</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>82624</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbGetCurTaskIdx</Name>
-        <Type Namespace="Tc2_System">GETCURTASKINDEX</Type>
-        <BitSize>128</BitSize>
-        <BitOffs>82848</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbWritePersistentData</Name>
-        <Type Namespace="LCLS_General.Tc2_Utilities">WritePersistentData</Type>
-        <BitSize>1600</BitSize>
-        <BitOffs>82976</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tRecover</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>84576</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>rVAC_SP</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>84800</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>rPRO_SP</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>84832</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>rHYS_PR</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>84864</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Method>
-        <Name>__GetInterfacePointer</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>__GetInterfaceReference</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>nInterfaceId</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>reflection</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_MKS500</Name>
-      <Comment> This function is for the Cold Cathode MKS 500. 
-
-If connected to Beckhoff EP boxes. Set the EP bit to TRUE, this is necessary for the 
-MKS500-to-EP box interface because the EP boxes do not natively support the 5v IO 
-signals on the MKS500 gauge.
-
-A setup process is required for the MKS500 to be usable.
-See here: https://confluence.slac.stanford.edu/display/PCDS/MKS+500+-+Cold+Cathode
-
-This function provides ILK and Set Point Protection for the Cold Cathode.
-</Comment>
-      <BitSize>88000</BitSize>
-      <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
-      <SubItem>
-        <Name>PG</Name>
-        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
-        <BitSize>1056</BitSize>
-        <BitOffs>84928</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bEP</Name>
-        <Type>BOOL</Type>
-        <Comment> Set to True if This Gauge is connected to EP BOX and not EL Terminals</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>85984</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>tRecoverDelay</Name>
-        <Type>TIME</Type>
-        <Comment>Delay Time after the first cycle to start the device. Default is 600S</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>86016</BitOffs>
-        <Default>
-          <Value>600000</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IG</Name>
-        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
-        <BitSize>1056</BitSize>
-        <BitOffs>86048</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-    pv: 
-	</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>rV</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87104</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>GaugeTurnOnTmr</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>87136</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>tStartupTimer</Name>
-        <Type Namespace="Tc2_Standard">TON</Type>
-        <BitSize>224</BitSize>
-        <BitOffs>87360</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>iTermBits</Name>
-        <Type>UINT</Type>
-        <Comment> The terminal's maximum value in bits</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>87584</BitOffs>
-        <Default>
-          <Value>32767</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>i_iPRESS_R</Name>
-        <Type>INT</Type>
-        <Comment> Controls and I/Os</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>87600</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>q_xHV_DIS</Name>
-        <Type>BOOL</Type>
-        <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>87616</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>i_xHV_ON</Name>
-        <Type>BOOL</Type>
-        <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>87624</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>i_xDisc_Active</Name>
-        <Type>BOOL</Type>
-        <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>87632</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>binit</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>87640</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>pBase</Name>
-        <Type>REAL</Type>
-        <Comment>default curve base pressure is 1E-10. Confusing since can't actually read that low using analog out.</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>87648</BitOffs>
-        <Default>
-          <Value>1E-10</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>vBase</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87680</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>vDisconnected</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87712</BitOffs>
-        <Default>
-          <Value>0.5</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>vSlope</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87744</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>vGaugeOff</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87776</BitOffs>
-        <Default>
-          <Value>9.8</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>vNoDischarge</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87808</BitOffs>
-        <Default>
-          <Value>9.3</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>MinPressure</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87840</BitOffs>
-        <Default>
-          <Value>1E-10</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>cDefaultPressure</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87872</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rDeadband</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>87904</BitOffs>
-        <Default>
-          <Value>0.3</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>bWasOn</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>87936</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bAutoRecover</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>87944</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bAutoRecoverWrite</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>87952</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcPersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Action>
-        <Name>ACT_Logger</Name>
-      </Action>
-      <Action>
-        <Name>IO</Name>
-      </Action>
-      <Action>
-        <Name>ACT_Recover</Name>
-      </Action>
-      <Action>
-        <Name>ACT_Persistent</Name>
-      </Action>
-      <Method>
-        <Name>__GetInterfaceReference</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>nInterfaceId</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>M_HVE</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>enable</Name>
-          <Comment> set to true to enable, false to disable;</Comment>
-          <Type>BOOL</Type>
-          <BitSize>8</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>__GetInterfacePointer</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>M_SetBits</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>TermBits</Name>
-          <Comment> The terminal's maximum value in bits</Comment>
-          <Type>UINT</Type>
-          <BitSize>16</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>M_Recover</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_MKS275</Name>
-      <Comment> This function block is used to provide protection and automatic turn on of ion gauges,
- it also manages the turn on of the AT_VAC boolean, and checks to make sure the pressure is good 
- For MKS 275 mini-convectron </Comment>
-      <BitSize>86336</BitSize>
-      <ExtendsType Namespace="LCLS_Vacuum">FB_GaugeBase</ExtendsType>
-      <SubItem>
-        <Name>PG</Name>
-        <Type Namespace="LCLS_Vacuum">ST_VG</Type>
-        <BitSize>1056</BitSize>
-        <BitOffs>84928</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-    pv: 
-	</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>V</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>85984</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>iTermBits</Name>
-        <Type>UINT</Type>
-        <Comment> The terminal's maximum value in bits</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>86016</BitOffs>
-        <Default>
-          <Value>32767</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>Vlowest</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>86048</BitOffs>
-        <Default>
-          <Value>10</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>i_iPRESS_R</Name>
-        <Type>INT</Type>
-        <Comment> input Pressure // Link to analog Input</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>86080</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>MinPressure</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>86112</BitOffs>
-        <Default>
-          <Value>0.0001</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rDeadband</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>86144</BitOffs>
-        <Default>
-          <Value>0.05</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rValidLoBoundary</Name>
-        <Type>REAL</Type>
-        <Comment>  0.375V as per manual page 27</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>86176</BitOffs>
-        <Default>
-          <Value>0.375</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rValidHiBoundary</Name>
-        <Type>REAL</Type>
-        <Comment> 5.534; // manual page 27</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>86208</BitOffs>
-        <Default>
-          <Value>5.659</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rDisconnectedBoundary</Name>
-        <Type>REAL</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>86240</BitOffs>
-        <Default>
-          <Value>0.3</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>rDefaultVAC_SP</Name>
-        <Type>REAL</Type>
-        <Comment>Default set point 50 mT</Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>86272</BitOffs>
-        <Default>
-          <Value>0.05</Value>
-        </Default>
-      </SubItem>
-      <Action>
-        <Name>ACT_Logger</Name>
-      </Action>
-      <Action>
-        <Name>ACT_Persistent</Name>
-      </Action>
-      <Action>
-        <Name>IO</Name>
-      </Action>
-      <Method>
-        <Name>__GetInterfacePointer</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>M_SetBits</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>TermBits</Name>
-          <Comment> The terminal's maximum value in bits</Comment>
-          <Type>UINT</Type>
-          <BitSize>16</BitSize>
-        </Parameter>
-      </Method>
-      <Method>
-        <Name>__GetInterfaceReference</Name>
-        <ReturnType>BOOL</ReturnType>
-        <ReturnBitSize>8</ReturnBitSize>
-        <Parameter>
-          <Name>nInterfaceId</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-        <Parameter>
-          <Name>pRef</Name>
-          <Type PointerTo="2">DWORD</Type>
-          <BitSize>32</BitSize>
-        </Parameter>
-      </Method>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>no_check</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name>VERSION</Name>
       <BitSize>64</BitSize>
       <SubItem>
@@ -30907,7 +30907,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81068032</ByteSize>
+          <ByteSize>81002496</ByteSize>
           <Symbol>
             <Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
             <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
@@ -30943,281 +30943,6 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
             <BitOffs>633551336</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633705520</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633705536</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633795760</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633795776</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633886000</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633886016</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633976240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634066480</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634066496</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633976256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634156720</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634156736</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS</Name>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634246960</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI</Name>
-            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634246976</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634427456</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634427464</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634604160</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634604168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634780864</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634780872</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634957568</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634957576</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_iPRESS_R</Name>
             <Comment> Controls and I/Os</Comment>
             <BitSize>16</BitSize>
@@ -31228,7 +30953,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641797040</BitOffs>
+            <BitOffs>633705712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xHV_ON</Name>
@@ -31241,7 +30966,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641797064</BitOffs>
+            <BitOffs>633705736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xDisc_Active</Name>
@@ -31254,46 +30979,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641797072</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R</Name>
-            <Comment> Controls and I/Os</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641885040</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xHV_ON</Name>
-            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641885064</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xDisc_Active</Name>
-            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641885072</BitOffs>
+            <BitOffs>633705744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_iPRESS_R</Name>
@@ -31306,7 +30992,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641973040</BitOffs>
+            <BitOffs>633793712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xHV_ON</Name>
@@ -31319,7 +31005,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641973064</BitOffs>
+            <BitOffs>633793736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xDisc_Active</Name>
@@ -31332,7 +31018,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>641973072</BitOffs>
+            <BitOffs>633793744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01.i_iPRESS_R</Name>
@@ -31345,7 +31031,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642059520</BitOffs>
+            <BitOffs>633880192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_iPRESS_R</Name>
@@ -31358,7 +31044,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642147376</BitOffs>
+            <BitOffs>633968048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xHV_ON</Name>
@@ -31371,7 +31057,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642147400</BitOffs>
+            <BitOffs>633968072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xDisc_Active</Name>
@@ -31384,7 +31070,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642147408</BitOffs>
+            <BitOffs>633968080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01.i_iPRESS_R</Name>
@@ -31397,7 +31083,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642233856</BitOffs>
+            <BitOffs>634054528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_iPRESS_R</Name>
@@ -31410,7 +31096,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642321712</BitOffs>
+            <BitOffs>634142384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xHV_ON</Name>
@@ -31423,7 +31109,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642321736</BitOffs>
+            <BitOffs>634142408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xDisc_Active</Name>
@@ -31436,7 +31122,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642321744</BitOffs>
+            <BitOffs>634142416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01.i_iPRESS_R</Name>
@@ -31449,7 +31135,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642408192</BitOffs>
+            <BitOffs>634228864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_iPRESS_R</Name>
@@ -31462,7 +31148,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642496048</BitOffs>
+            <BitOffs>634316720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xHV_ON</Name>
@@ -31475,7 +31161,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642496072</BitOffs>
+            <BitOffs>634316744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xDisc_Active</Name>
@@ -31488,7 +31174,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642496080</BitOffs>
+            <BitOffs>634316752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01.i_iPRESS_R</Name>
@@ -31501,7 +31187,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642582528</BitOffs>
+            <BitOffs>634403200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_iPRESS_R</Name>
@@ -31514,7 +31200,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642670384</BitOffs>
+            <BitOffs>634491056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xHV_ON</Name>
@@ -31527,7 +31213,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642670408</BitOffs>
+            <BitOffs>634491080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xDisc_Active</Name>
@@ -31540,7 +31226,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642670416</BitOffs>
+            <BitOffs>634491088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01.i_iPRESS_R</Name>
@@ -31553,14 +31239,406 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>642756864</BitOffs>
+            <BitOffs>634577536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634664112</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634664128</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634754352</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634754368</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634844592</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634844608</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634934832</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634934848</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635025072</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635025088</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635115312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635115328</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS</Name>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635205552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI</Name>
+            <Comment> NO contact //function of relay set on the QPC to HV output state</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635205568</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635386048</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635386056</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635562752</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635562760</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635739456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635739464</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635916160</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635916168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xDisc_Active</Name>
+            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908176</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81068032</ByteSize>
+          <ByteSize>81002496</ByteSize>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633705728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633793728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633968064</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634142400</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634316736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634491072</BitOffs>
+          </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.q_xHVEna_DO</Name>
             <Comment> Enable High Voltage when TRUE</Comment>
@@ -31572,7 +31650,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633705504</BitOffs>
+            <BitOffs>634664096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.q_xHVEna_DO</Name>
@@ -31585,7 +31663,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633795744</BitOffs>
+            <BitOffs>634754336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO</Name>
@@ -31598,7 +31676,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633885984</BitOffs>
+            <BitOffs>634844576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO</Name>
@@ -31611,7 +31689,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633976224</BitOffs>
+            <BitOffs>634934816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO</Name>
@@ -31624,7 +31702,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634066464</BitOffs>
+            <BitOffs>635025056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO</Name>
@@ -31637,7 +31715,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634156704</BitOffs>
+            <BitOffs>635115296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO</Name>
@@ -31650,7 +31728,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634246944</BitOffs>
+            <BitOffs>635205536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
@@ -31662,7 +31740,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634427472</BitOffs>
+            <BitOffs>635386064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.q_xOPN_DO</Name>
@@ -31674,7 +31752,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634604176</BitOffs>
+            <BitOffs>635562768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.q_xOPN_DO</Name>
@@ -31686,7 +31764,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634780880</BitOffs>
+            <BitOffs>635739472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.q_xOPN_DO</Name>
@@ -31698,7 +31776,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634957584</BitOffs>
+            <BitOffs>635916176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1.q_xFastFaultOut</Name>
@@ -31718,20 +31796,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634957960</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641797056</BitOffs>
+            <BitOffs>635916552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS</Name>
@@ -31744,79 +31809,14 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>641885056</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>641973056</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642147392</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642321728</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642496064</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642670400</BitOffs>
+            <BitOffs>646908160</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81068032</ByteSize>
+          <ByteSize>81002496</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -38185,55 +38185,170 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
             <BitOffs>633616544</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_TXI_VAC_PUMPS.dummy_gauge</Name>
-            <BitSize>1056</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
-            <BitOffs>633617600</BitOffs>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01</Name>
+            <Comment>B940-008-K0S15-PNL-02 (FEE)</Comment>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:PC1K3:GCC:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633618112</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>0</Value>
-            </Default>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01</Name>
+            <Comment>B940-008-K3S23-PNL-1 (FEE)</Comment>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:TV1K3:GCC:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633706112</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01</Name>
+            <BitSize>86336</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:TV1K3:GPI:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633794112</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01</Name>
+            <Comment>B940-008-K3S34-PNL-1 (FEE)</Comment>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:ST1L3:GCC:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633880448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01</Name>
+            <BitSize>86336</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:ST1L3:GPI:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>633968448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01</Name>
+            <Comment>B950-100H1-K3S1-PNL-1 (H1.1)</Comment>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633619168</BitOffs>
+            <BitOffs>634054784</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.bFPUSupport</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01</Name>
+            <BitSize>86336</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633619176</BitOffs>
+            <BitOffs>634142784</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>Constants.nRegisterSize</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>WORD</BaseType>
-            <Default>
-              <Value>32</Value>
-            </Default>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01</Name>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
             <Properties>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633619184</BitOffs>
+            <BitOffs>634229120</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01</Name>
+            <BitSize>86336</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634317120</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01</Name>
+            <Comment>B950-100-K3S3-DRL-1 (H1.1)</Comment>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634403456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01</Name>
+            <BitSize>86336</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>634491456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01</Name>
@@ -38253,7 +38368,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633619200</BitOffs>
+            <BitOffs>634577792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01</Name>
@@ -38272,7 +38387,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633709440</BitOffs>
+            <BitOffs>634668032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01</Name>
@@ -38291,7 +38406,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633799680</BitOffs>
+            <BitOffs>634758272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02</Name>
@@ -38310,7 +38425,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633889920</BitOffs>
+            <BitOffs>634848512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01</Name>
@@ -38330,7 +38445,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633980160</BitOffs>
+            <BitOffs>634938752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01</Name>
@@ -38349,7 +38464,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634070400</BitOffs>
+            <BitOffs>635028992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01</Name>
@@ -38368,7 +38483,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634160640</BitOffs>
+            <BitOffs>635119232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01</Name>
@@ -38383,7 +38498,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634250880</BitOffs>
+            <BitOffs>635209472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01</Name>
@@ -38398,7 +38513,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634427584</BitOffs>
+            <BitOffs>635386176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01</Name>
@@ -38413,7 +38528,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634604288</BitOffs>
+            <BitOffs>635562880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01</Name>
@@ -38428,7 +38543,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634780992</BitOffs>
+            <BitOffs>635739584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1</Name>
@@ -38454,7 +38569,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634957696</BitOffs>
+            <BitOffs>635916288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.fbArbiter1</Name>
@@ -38472,7 +38587,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635452608</BitOffs>
+            <BitOffs>636411200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.fbLogHandler</Name>
@@ -38483,192 +38598,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635920640</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01</Name>
-            <Comment>B940-008-K0S15-PNL-02 (FEE)</Comment>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:PC1K3:GCC:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641709440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02</Name>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:PC1K3:GCC:02 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641797440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01</Name>
-            <Comment>B940-008-K3S23-PNL-1 (FEE)</Comment>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:TV1K3:GCC:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641885440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01</Name>
-            <BitSize>86336</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:TV1K3:GPI:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>641973440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01</Name>
-            <Comment>B940-008-K3S34-PNL-1 (FEE)</Comment>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:ST1L3:GCC:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642059776</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01</Name>
-            <BitSize>86336</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TXI:ST1L3:GPI:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642147776</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01</Name>
-            <Comment>B950-100H1-K3S1-PNL-1 (H1.1)</Comment>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642234112</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01</Name>
-            <BitSize>86336</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642322112</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01</Name>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642408448</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01</Name>
-            <BitSize>86336</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642496448</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01</Name>
-            <Comment>B950-100-K3S3-DRL-1 (H1.1)</Comment>
-            <BitSize>88000</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642582784</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01</Name>
-            <BitSize>86336</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_MKS275</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642670784</BitOffs>
+            <BitOffs>636879232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -38698,7 +38628,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757120</BitOffs>
+            <BitOffs>642668032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -38728,7 +38658,52 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757184</BitOffs>
+            <BitOffs>642668096</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668160</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bFPUSupport</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nRegisterSize</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>WORD</BaseType>
+            <Default>
+              <Value>32</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -38743,7 +38718,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757248</BitOffs>
+            <BitOffs>642668192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -38757,7 +38732,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757264</BitOffs>
+            <BitOffs>642668208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -38772,7 +38747,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757280</BitOffs>
+            <BitOffs>642668224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -38787,7 +38762,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757312</BitOffs>
+            <BitOffs>642668256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -38801,21 +38776,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642757344</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
-            <BitSize>32</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-            <Properties>
-              <Property>
-                <Name>no_init</Name>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642759392</BitOffs>
+            <BitOffs>642668288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -38833,7 +38794,21 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642759424</BitOffs>
+            <BitOffs>642670336</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+            <Properties>
+              <Property>
+                <Name>no_init</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642671360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -38847,7 +38822,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642760448</BitOffs>
+            <BitOffs>642671392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -38868,7 +38843,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642760480</BitOffs>
+            <BitOffs>642671424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
@@ -38940,7 +38915,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776288</BitOffs>
+            <BitOffs>642687232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
@@ -39012,7 +38987,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776416</BitOffs>
+            <BitOffs>642687360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
@@ -39084,7 +39059,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776544</BitOffs>
+            <BitOffs>642687488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
@@ -39156,7 +39131,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776672</BitOffs>
+            <BitOffs>642687616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -39228,7 +39203,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776800</BitOffs>
+            <BitOffs>642687744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -39300,7 +39275,7 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642776928</BitOffs>
+            <BitOffs>642687872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -39326,14 +39301,39 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642809952</BitOffs>
+            <BitOffs>642720896</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02</Name>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:PC1K3:GCC:02 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646820544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_TXI_VAC_PUMPS.dummy_gauge</Name>
+            <BitSize>1056</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
+            <BitOffs>647425152</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81068032</ByteSize>
+          <ByteSize>81002496</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -39402,15 +39402,15 @@ This function provides ILK and Set Point Protection for the Cold Cathode.
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2022-10-12T12:44:22</Value>
+          <Value>2022-10-12T13:07:29</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>569344</Value>
+          <Value>524288</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80035840</Value>
+          <Value>79998976</Value>
         </Property>
       </Properties>
     </Module>
