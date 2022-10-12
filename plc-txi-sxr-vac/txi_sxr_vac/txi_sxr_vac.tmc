@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{662CD8E3-653A-1726-DC0D-4BFBA90C8F24}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2A3F1F69-0FE7-B3B0-23A6-B4E56B60383F}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -30907,7 +30907,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
             <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
@@ -31560,7 +31560,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS</Name>
             <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
@@ -31816,7 +31816,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -39333,7 +39333,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -39402,15 +39402,15 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2022-10-12T13:07:29</Value>
+          <Value>2022-10-12T13:15:01</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>524288</Value>
+          <Value>569344</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>79998976</Value>
+          <Value>80035840</Value>
         </Property>
       </Properties>
     </Module>
