@@ -86,7 +86,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 					<Type>INT</Type>
 				</Entry>
 			</Pdo>
-			<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
+			<Pdo Name="PC1K3_GCC_02" Index="#x1a02" Flags="#x0010" SyncMan="3">
 				<ExcludePdo>#x1a03</ExcludePdo>
 				<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
 					<Type>BIT</Type>
