@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{61A3FCE6-5EA5-1DAD-B127-B5D8CCA9454A}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2A3F1F69-0FE7-B3B0-23A6-B4E56B60383F}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -210,31 +210,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80351992</GetCodeOffs>
+        <GetCodeOffs>80351856</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80352024</GetCodeOffs>
+        <GetCodeOffs>80351888</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80352032</GetCodeOffs>
+        <GetCodeOffs>80351896</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80352016</GetCodeOffs>
+        <GetCodeOffs>80351880</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80352028</GetCodeOffs>
+        <GetCodeOffs>80351892</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -1488,15 +1488,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80351932</GetCodeOffs>
-        <SetCodeOffs>80351956</SetCodeOffs>
+        <GetCodeOffs>80351796</GetCodeOffs>
+        <SetCodeOffs>80351820</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80351968</GetCodeOffs>
-        <SetCodeOffs>80351980</SetCodeOffs>
+        <GetCodeOffs>80351832</GetCodeOffs>
+        <SetCodeOffs>80351844</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>__setbCutInstancePathByLastInst</Name>
@@ -1794,31 +1794,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>80352080</GetCodeOffs>
+        <GetCodeOffs>80351944</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80352060</GetCodeOffs>
+        <GetCodeOffs>80351924</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80352148</GetCodeOffs>
+        <GetCodeOffs>80352012</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80352108</GetCodeOffs>
+        <GetCodeOffs>80351972</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80352152</GetCodeOffs>
+        <GetCodeOffs>80352016</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>EqualsToEventClass</Name>
@@ -2428,7 +2428,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80352180</GetCodeOffs>
+        <GetCodeOffs>80352044</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name>SetJsonAttribute</Name>
@@ -24786,8 +24786,8 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         <Name>nTimestamp</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80356844</GetCodeOffs>
-        <SetCodeOffs>80356852</SetCodeOffs>
+        <GetCodeOffs>80356708</GetCodeOffs>
+        <SetCodeOffs>80356716</SetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="44">__getnTimestamp</Name>
@@ -26041,31 +26041,31 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80356408</GetCodeOffs>
+        <GetCodeOffs>80356272</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80356440</GetCodeOffs>
+        <GetCodeOffs>80356304</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80356444</GetCodeOffs>
+        <GetCodeOffs>80356308</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80356432</GetCodeOffs>
+        <GetCodeOffs>80356296</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80356452</GetCodeOffs>
+        <GetCodeOffs>80356316</GetCodeOffs>
       </PropertyItem>
       <Method>
         <Name RpcEnable="plc" VTableIndex="0">__getbBusy</Name>
@@ -30907,7 +30907,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
             <Comment> AMS Net ID used for FB_EcatDiag, among others </Comment>
@@ -30953,7 +30953,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633706800</BitOffs>
+            <BitOffs>633705712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xHV_ON</Name>
@@ -30966,7 +30966,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633706824</BitOffs>
+            <BitOffs>633705736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xDisc_Active</Name>
@@ -30979,7 +30979,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633706832</BitOffs>
+            <BitOffs>633705744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_iPRESS_R</Name>
@@ -30992,7 +30992,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633794800</BitOffs>
+            <BitOffs>633793712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xHV_ON</Name>
@@ -31005,7 +31005,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633794824</BitOffs>
+            <BitOffs>633793736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xDisc_Active</Name>
@@ -31018,7 +31018,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633794832</BitOffs>
+            <BitOffs>633793744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01.i_iPRESS_R</Name>
@@ -31031,7 +31031,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633881280</BitOffs>
+            <BitOffs>633880192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_iPRESS_R</Name>
@@ -31044,7 +31044,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633969136</BitOffs>
+            <BitOffs>633968048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xHV_ON</Name>
@@ -31057,7 +31057,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633969160</BitOffs>
+            <BitOffs>633968072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xDisc_Active</Name>
@@ -31070,7 +31070,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>633969168</BitOffs>
+            <BitOffs>633968080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01.i_iPRESS_R</Name>
@@ -31083,7 +31083,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634055616</BitOffs>
+            <BitOffs>634054528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_iPRESS_R</Name>
@@ -31096,7 +31096,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634143472</BitOffs>
+            <BitOffs>634142384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xHV_ON</Name>
@@ -31109,7 +31109,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634143496</BitOffs>
+            <BitOffs>634142408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xDisc_Active</Name>
@@ -31122,7 +31122,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634143504</BitOffs>
+            <BitOffs>634142416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01.i_iPRESS_R</Name>
@@ -31135,7 +31135,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634229952</BitOffs>
+            <BitOffs>634228864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_iPRESS_R</Name>
@@ -31148,7 +31148,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634317808</BitOffs>
+            <BitOffs>634316720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xHV_ON</Name>
@@ -31161,7 +31161,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634317832</BitOffs>
+            <BitOffs>634316744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xDisc_Active</Name>
@@ -31174,7 +31174,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634317840</BitOffs>
+            <BitOffs>634316752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01.i_iPRESS_R</Name>
@@ -31187,7 +31187,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634404288</BitOffs>
+            <BitOffs>634403200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_iPRESS_R</Name>
@@ -31200,7 +31200,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634492144</BitOffs>
+            <BitOffs>634491056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xHV_ON</Name>
@@ -31213,7 +31213,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634492168</BitOffs>
+            <BitOffs>634491080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xDisc_Active</Name>
@@ -31226,7 +31226,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634492176</BitOffs>
+            <BitOffs>634491088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01.i_iPRESS_R</Name>
@@ -31239,7 +31239,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634578624</BitOffs>
+            <BitOffs>634577536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_iPRESS</Name>
@@ -31251,7 +31251,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634665200</BitOffs>
+            <BitOffs>634664112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI</Name>
@@ -31264,7 +31264,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634665216</BitOffs>
+            <BitOffs>634664128</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_iPRESS</Name>
@@ -31276,7 +31276,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634755440</BitOffs>
+            <BitOffs>634754352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI</Name>
@@ -31289,7 +31289,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634755456</BitOffs>
+            <BitOffs>634754368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_iPRESS</Name>
@@ -31301,7 +31301,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634845680</BitOffs>
+            <BitOffs>634844592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI</Name>
@@ -31314,7 +31314,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634845696</BitOffs>
+            <BitOffs>634844608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_iPRESS</Name>
@@ -31326,7 +31326,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634935920</BitOffs>
+            <BitOffs>634934832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI</Name>
@@ -31339,7 +31339,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634935936</BitOffs>
+            <BitOffs>634934848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_iPRESS</Name>
@@ -31351,7 +31351,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635026160</BitOffs>
+            <BitOffs>635025072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI</Name>
@@ -31364,7 +31364,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635026176</BitOffs>
+            <BitOffs>635025088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_iPRESS</Name>
@@ -31376,7 +31376,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635116400</BitOffs>
+            <BitOffs>635115312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI</Name>
@@ -31389,7 +31389,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635116416</BitOffs>
+            <BitOffs>635115328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS</Name>
@@ -31401,7 +31401,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635206640</BitOffs>
+            <BitOffs>635205552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI</Name>
@@ -31414,7 +31414,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635206656</BitOffs>
+            <BitOffs>635205568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
@@ -31427,7 +31427,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635387136</BitOffs>
+            <BitOffs>635386048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS</Name>
@@ -31439,7 +31439,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635387144</BitOffs>
+            <BitOffs>635386056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
@@ -31452,7 +31452,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635563840</BitOffs>
+            <BitOffs>635562752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS</Name>
@@ -31464,7 +31464,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635563848</BitOffs>
+            <BitOffs>635562760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS</Name>
@@ -31477,7 +31477,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635740544</BitOffs>
+            <BitOffs>635739456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xClsLS</Name>
@@ -31489,7 +31489,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635740552</BitOffs>
+            <BitOffs>635739464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS</Name>
@@ -31502,7 +31502,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635917248</BitOffs>
+            <BitOffs>635916160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS</Name>
@@ -31514,14 +31514,53 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635917256</BitOffs>
+            <BitOffs>635916168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xDisc_Active</Name>
+            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908176</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS</Name>
             <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
@@ -31533,59 +31572,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633706816</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>633969152</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634143488</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634492160</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>634317824</BitOffs>
+            <BitOffs>633705728</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
@@ -31598,7 +31585,59 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>633794816</BitOffs>
+            <BitOffs>633793728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>633968064</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634142400</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634316736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634491072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.q_xHVEna_DO</Name>
@@ -31611,7 +31650,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634665184</BitOffs>
+            <BitOffs>634664096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.q_xHVEna_DO</Name>
@@ -31624,45 +31663,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634755424</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO</Name>
-            <Comment> Enable High Voltage when TRUE</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>635026144</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO</Name>
-            <Comment> Enable High Voltage when TRUE</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>635116384</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>635387152</BitOffs>
+            <BitOffs>634754336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO</Name>
@@ -31675,7 +31676,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634845664</BitOffs>
+            <BitOffs>634844576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO</Name>
@@ -31688,7 +31689,33 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634935904</BitOffs>
+            <BitOffs>634934816</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO</Name>
+            <Comment> Enable High Voltage when TRUE</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635025056</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO</Name>
+            <Comment> Enable High Voltage when TRUE</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635115296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO</Name>
@@ -31701,7 +31728,19 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635206624</BitOffs>
+            <BitOffs>635205536</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>635386064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.q_xOPN_DO</Name>
@@ -31713,7 +31752,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635563856</BitOffs>
+            <BitOffs>635562768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.q_xOPN_DO</Name>
@@ -31725,7 +31764,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635740560</BitOffs>
+            <BitOffs>635739472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.q_xOPN_DO</Name>
@@ -31737,7 +31776,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635917264</BitOffs>
+            <BitOffs>635916176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1.q_xFastFaultOut</Name>
@@ -31757,14 +31796,27 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635917640</BitOffs>
+            <BitOffs>635916552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908160</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -38133,57 +38185,6 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
             <BitOffs>633616544</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>PRG_TXI_VAC_PUMPS.dummy_gauge</Name>
-            <BitSize>1056</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
-            <BitOffs>633617600</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>0</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633619168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bFPUSupport</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633619176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nRegisterSize</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>WORD</BaseType>
-            <Default>
-              <Value>32</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>633619184</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01</Name>
             <Comment>B940-008-K0S15-PNL-02 (FEE)</Comment>
             <BitSize>88000</BitSize>
@@ -38201,7 +38202,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633619200</BitOffs>
+            <BitOffs>633618112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01</Name>
@@ -38221,7 +38222,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633707200</BitOffs>
+            <BitOffs>633706112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01</Name>
@@ -38240,7 +38241,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633795200</BitOffs>
+            <BitOffs>633794112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01</Name>
@@ -38260,7 +38261,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633881536</BitOffs>
+            <BitOffs>633880448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01</Name>
@@ -38279,7 +38280,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>633969536</BitOffs>
+            <BitOffs>633968448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01</Name>
@@ -38291,7 +38292,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634055872</BitOffs>
+            <BitOffs>634054784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01</Name>
@@ -38302,7 +38303,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634143872</BitOffs>
+            <BitOffs>634142784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01</Name>
@@ -38313,7 +38314,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634230208</BitOffs>
+            <BitOffs>634229120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01</Name>
@@ -38324,7 +38325,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634318208</BitOffs>
+            <BitOffs>634317120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01</Name>
@@ -38336,7 +38337,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634404544</BitOffs>
+            <BitOffs>634403456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01</Name>
@@ -38347,7 +38348,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634492544</BitOffs>
+            <BitOffs>634491456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01</Name>
@@ -38367,7 +38368,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634578880</BitOffs>
+            <BitOffs>634577792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01</Name>
@@ -38386,7 +38387,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634669120</BitOffs>
+            <BitOffs>634668032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01</Name>
@@ -38405,7 +38406,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634759360</BitOffs>
+            <BitOffs>634758272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02</Name>
@@ -38424,7 +38425,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634849600</BitOffs>
+            <BitOffs>634848512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01</Name>
@@ -38444,7 +38445,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>634939840</BitOffs>
+            <BitOffs>634938752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01</Name>
@@ -38463,7 +38464,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635030080</BitOffs>
+            <BitOffs>635028992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01</Name>
@@ -38482,22 +38483,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635120320</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01</Name>
-            <BitSize>176704</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_VGC</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value> pv: TV1K3:VGC:01 </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>635387264</BitOffs>
+            <BitOffs>635119232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01</Name>
@@ -38512,7 +38498,22 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635210560</BitOffs>
+            <BitOffs>635209472</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01</Name>
+            <BitSize>176704</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_VGC</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TV1K3:VGC:01 </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>635386176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01</Name>
@@ -38527,7 +38528,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635563968</BitOffs>
+            <BitOffs>635562880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01</Name>
@@ -38542,11 +38543,11 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635740672</BitOffs>
+            <BitOffs>635739584</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1</Name>
-            <Comment> change i_sNetID</Comment>
+            <Comment> change i_sNetID ??</Comment>
             <BitSize>494912</BitSize>
             <BaseType Namespace="PMPS">FB_HardwareFFOutput</BaseType>
             <Default>
@@ -38568,7 +38569,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>635917376</BitOffs>
+            <BitOffs>635916288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.fbArbiter1</Name>
@@ -38586,7 +38587,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>636412288</BitOffs>
+            <BitOffs>636411200</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.fbLogHandler</Name>
@@ -38597,7 +38598,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>636880320</BitOffs>
+            <BitOffs>636879232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -38627,7 +38628,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669120</BitOffs>
+            <BitOffs>642668032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -38657,7 +38658,52 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669184</BitOffs>
+            <BitOffs>642668096</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668160</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bFPUSupport</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nRegisterSize</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>WORD</BaseType>
+            <Default>
+              <Value>32</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642668176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nPackMode</Name>
@@ -38672,7 +38718,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669248</BitOffs>
+            <BitOffs>642668192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -38686,7 +38732,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669264</BitOffs>
+            <BitOffs>642668208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -38701,7 +38747,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669280</BitOffs>
+            <BitOffs>642668224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -38716,7 +38762,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669312</BitOffs>
+            <BitOffs>642668256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -38730,21 +38776,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642669344</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
-            <BitSize>32</BitSize>
-            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
-            <Properties>
-              <Property>
-                <Name>no_init</Name>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642671392</BitOffs>
+            <BitOffs>642668288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -38762,7 +38794,21 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642671424</BitOffs>
+            <BitOffs>642670336</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
+            <BitSize>32</BitSize>
+            <BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+            <Properties>
+              <Property>
+                <Name>no_init</Name>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642671360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -38776,7 +38822,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642672448</BitOffs>
+            <BitOffs>642671392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -38797,7 +38843,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642672480</BitOffs>
+            <BitOffs>642671424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
@@ -38869,7 +38915,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688288</BitOffs>
+            <BitOffs>642687232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
@@ -38941,7 +38987,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688416</BitOffs>
+            <BitOffs>642687360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
@@ -39013,7 +39059,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688544</BitOffs>
+            <BitOffs>642687488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
@@ -39085,7 +39131,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688672</BitOffs>
+            <BitOffs>642687616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -39157,7 +39203,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688800</BitOffs>
+            <BitOffs>642687744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -39229,7 +39275,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642688928</BitOffs>
+            <BitOffs>642687872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -39255,14 +39301,39 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721952</BitOffs>
+            <BitOffs>642720896</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02</Name>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:PC1K3:GCC:02 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646820544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>PRG_TXI_VAC_PUMPS.dummy_gauge</Name>
+            <BitSize>1056</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
+            <BitOffs>647425152</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81002496</ByteSize>
+          <ByteSize>81068032</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -39331,7 +39402,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2022-10-10T13:22:02</Value>
+          <Value>2022-10-12T13:15:01</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
@@ -39339,7 +39410,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80027648</Value>
+          <Value>80035840</Value>
         </Property>
       </Properties>
     </Module>

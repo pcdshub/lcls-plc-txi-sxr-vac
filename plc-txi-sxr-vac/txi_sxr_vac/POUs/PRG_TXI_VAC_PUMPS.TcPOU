@@ -17,12 +17,17 @@ dummy_gauge.rPRESS := 1e-4;
 fb_TV1K3_PIP_01(i_stGauge := fb_TV1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
 fb_ST1K3_PIP_01(i_stGauge := fb_ST1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
 fb_PC1K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
-fb_PC1K3_PIP_02(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+fb_PC1K3_PIP_02(i_stGauge := fb_PC1K3_GCC_02.PG, i_xOverrideMode := xSystemOverrideMode1);
 
 //B940-009-R17-PCI-02
-fb_TV2K3_PIP_01(i_stGauge := fb_TV2K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
-fb_TV3K3_PIP_01(i_stGauge := fb_TV3K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
-fb_TV4K3_PIP_01(i_stGauge := fb_TV4K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);]]></ST>
+//fb_TV2K3_PIP_01(i_stGauge := fb_TV2K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+//fb_TV3K3_PIP_01(i_stGauge := fb_TV3K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+//fb_TV4K3_PIP_01(i_stGauge := fb_TV4K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+
+//B940-009-R17-PCI-02 - For pump controls meanwhile gauges are installed
+fb_TV2K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+fb_TV3K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+fb_TV4K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
