@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DUTs &mdash; pcdshub/lcls-plc-txi-sxr-vac  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/docs-versions-menu.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Data Types" href="plc-txi-sxr-vac_txi_sxr_vac_epics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            pcdshub/lcls-plc-txi-sxr-vac
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">plc-txi-sxr-vac</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_pragmas.html">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_nc.html">NC Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_boxes.html">Boxes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_links.html">Links</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">txi_sxr_vac</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_summary.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_summary.html#pragmas">Pragmas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_summary.html#libraries">Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_summary.html#symbols">Symbols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_epics.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plc-txi-sxr-vac_txi_sxr_vac_epics.html#database-records">Database Records</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DUTs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#gvls">GVLs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-txi-vac-gauges">GVL_TXI_VAC_GAUGES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-txi-vac-pumps">GVL_TXI_VAC_PUMPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-txi-vac-valves">GVL_TXI_VAC_VALVES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gvl-txi-vac-variables">GVL_TXI_VAC_VARIABLES</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#pous">POUs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main">MAIN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-txi-vac-gauges">PRG_TXI_VAC_GAUGES</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-txi-vac-pumps">PRG_TXI_VAC_PUMPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prg-txi-vac-valves">PRG_TXI_VAC_VALVES</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pcdshub/lcls-plc-txi-sxr-vac</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">DUTs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/plc-txi-sxr-vac_txi_sxr_vac_source.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="duts">
+<h1>DUTs<a class="headerlink" href="#duts" title="Permalink to this heading"></a></h1>
+</section>
+<section id="gvls">
+<h1>GVLs<a class="headerlink" href="#gvls" title="Permalink to this heading"></a></h1>
+<section id="gvl-txi-vac-gauges">
+<h2>GVL_TXI_VAC_GAUGES<a class="headerlink" href="#gvl-txi-vac-gauges" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K0S15</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">02</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:PC1K3:GCC:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.q_xHV_DIS             := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_01^Output &#39;</span><span class="p">}</span>
+<span class="n">fb_PC1K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:PC1K3:GCC:02 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.q_xHV_DIS             := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_02^Output &#39;</span><span class="p">}</span>
+<span class="n">fb_PC1K3_GCC_02</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K3S23</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV1K3:GCC:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.q_xHV_DIS             := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)^TV1K3_GCC_01^Output  &#39;</span><span class="p">}</span>
+<span class="n">fb_TV1K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV1K3:GPI:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    &#39;</span><span class="p">}</span>
+<span class="n">fb_TV1K3_GPI_01</span><span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K3S34</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:ST1L3:GCC:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.q_xHV_DIS             := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)^ST1K3_GCC-01^Output  &#39;</span><span class="p">}</span>
+<span class="n">fb_ST1K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:ST1L3:GPI:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS_R    := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   &#39;</span><span class="p">}</span>
+<span class="n">fb_ST1K3_GPI_01</span><span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B950</span><span class="o">-</span><span class="mi">100</span><span class="n">H1</span><span class="o">-</span><span class="n">K3S1</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">H1</span><span class="mf">.1</span><span class="p">)</span>
+<span class="n">fb_TV2K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="n">fb_TV2K3_GPI_01</span><span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+<span class="n">fb_TV3K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="n">fb_TV3K3_GPI_01</span><span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B950</span><span class="o">-</span><span class="mi">100</span><span class="o">-</span><span class="n">K3S3</span><span class="o">-</span><span class="n">DRL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">H1</span><span class="mf">.1</span><span class="p">)</span>
+<span class="n">fb_TV4K3_GCC_01</span><span class="p">:</span> <span class="n">FB_MKS500</span><span class="p">;</span>
+<span class="n">fb_TV4K3_GPI_01</span><span class="p">:</span> <span class="n">FB_MKS275</span><span class="p">;</span>
+
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
+<section id="gvl-txi-vac-pumps">
+<h2>GVL_TXI_VAC_PUMPS<a class="headerlink" href="#gvl-txi-vac-pumps" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">009</span><span class="o">-</span><span class="n">R17</span><span class="o">-</span><span class="n">PCI</span><span class="o">-</span><span class="mi">01</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV1K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^TV1K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^TV1K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^TV1K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_TV1K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:ST1K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^ST1K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^ST1K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^ST1K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_ST1K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:PC1K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_PC1K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:PC1K3:PIP:02 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_02^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_02^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_02^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_PC1K3_PIP_02</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">009</span><span class="o">-</span><span class="n">R17</span><span class="o">-</span><span class="n">PCI</span><span class="o">-</span><span class="mi">02</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV2K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV2K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV2K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV2K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_TV2K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV3K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV3K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV3K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV3K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_TV3K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TXI:TV4K3:PIP:01 &#39;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_iPRESS              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV4K3_PIP_01^Value  &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.q_xHVEna_DO   := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV4K3_PIP_01^Output &#39;</span><span class="p">;</span>
+                      <span class="o">:=</span>    <span class="s1">&#39;.i_xSP_DI              := TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV4K3_PIP_01^Input &#39;</span>
+<span class="p">}</span>
+<span class="n">fb_TV4K3_PIP_01</span><span class="p">:</span> <span class="n">FB_PIP_GAMMA</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
+<section id="gvl-txi-vac-valves">
+<h2>GVL_TXI_VAC_VALVES<a class="headerlink" href="#gvl-txi-vac-valves" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VAR_GLOBAL</span>
+<span class="o">//</span><span class="n">FEE</span> <span class="n">Valves</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 1^Input;</span>
+                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">30</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E16</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">K0S15</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">02</span> <span class="n">EP1</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                             <span class="o">.</span><span class="n">q_xOPN_DO</span>     <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">30</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E16</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">K0S15</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">02</span> <span class="n">EP1</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: PC1K3:VGC:01 &#39;</span><span class="p">}</span>
+<span class="n">fb_PC1K3_VGC_01</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>    <span class="s1">&#39;.i_xOpnLS      :=      TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 1^Input;</span>
+                             <span class="o">.</span><span class="n">i_xClsLS</span>      <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">30</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E16</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">K3S34</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="n">EP1</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                             <span class="o">.</span><span class="n">q_xOPN_DO</span>     <span class="o">:=</span>      <span class="n">TIID</span><span class="o">^</span><span class="n">Device</span> <span class="mi">1</span> <span class="p">(</span><span class="n">EtherCAT</span><span class="p">)</span><span class="o">^</span><span class="n">Term</span> <span class="mi">30</span> <span class="p">(</span><span class="n">EK1200</span><span class="p">)</span><span class="o">^</span><span class="n">E16</span> <span class="p">(</span><span class="n">EK1122</span><span class="p">)</span><span class="o">^</span><span class="n">K3S34</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="n">EP1</span> <span class="p">(</span><span class="n">EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">)</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">11</span><span class="o">^</span><span class="n">Output</span><span class="s1">&#39;}</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TV1K3:VGC:01 &#39;</span><span class="p">}</span>
+<span class="n">fb_TV1K3_VGC_01</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
+<span class="o">//</span><span class="n">H1</span><span class="mf">.1</span> <span class="n">Valves</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TV2K3:VGC:01 &#39;</span><span class="p">}</span>
+<span class="n">fb_TV2K3_VGC_01</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
+<span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39; pv: TV4K3:VGC:01 &#39;</span><span class="p">}</span>
+<span class="n">fb_TV4K3_VGC_01</span> <span class="p">:</span> <span class="n">FB_VGC</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+</pre></div>
+</div>
+</section>
+<section id="gvl-txi-vac-variables">
+<h2>GVL_TXI_VAC_VARIABLES<a class="headerlink" href="#gvl-txi-vac-variables" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>VAR_GLOBAL
+{attribute &#39;pytmc&#39; := &#39;pv: TXI:SXR:FEE:VAC:OVRDON;
+    field: ZNAM Override OFF;
+    field: ONAM Override ON;
+    io: io;
+&#39;}
+xSystemOverrideMode1 : BOOL; (* Global system override for the prototype section*)
+
+{attribute &#39;pytmc&#39; := &#39; pv: PLC:TXI:VAC:FFO:01 &#39;}
+{attribute &#39;TcLinkTo&#39; := &#39;.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output&#39;}
+g_FastFaultOutput1  :   FB_HardwareFFOutput:= (i_sNetID:=&#39;172.21.42.126.1.1&#39;); // change i_sNetID ??
+
+{attribute &#39;pytmc&#39; := &#39; pv: PLC:TXI:VAC:ARB:01 &#39;}
+fbArbiter1 : FB_Arbiter(1);
+
+fbLogHandler : FB_loghandler;
+
+END_VAR
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pous">
+<h1>POUs<a class="headerlink" href="#pous" title="Permalink to this heading"></a></h1>
+<section id="main">
+<h2>MAIN<a class="headerlink" href="#main" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">MAIN</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">PRG_TXI_VAC_GAUGES</span><span class="p">();</span>
+<span class="n">PRG_TXI_VAC_PUMPS</span><span class="p">();</span>
+<span class="n">PRG_TXI_VAC_VALVES</span><span class="p">();</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Related:</dt><dd><ul class="simple">
+<li><p><a class="reference internal" href="#prg-txi-vac-gauges">PRG_TXI_VAC_GAUGES</a></p></li>
+<li><p><a class="reference internal" href="#prg-txi-vac-pumps">PRG_TXI_VAC_PUMPS</a></p></li>
+<li><p><a class="reference internal" href="#prg-txi-vac-valves">PRG_TXI_VAC_VALVES</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prg-txi-vac-gauges">
+<h2>PRG_TXI_VAC_GAUGES<a class="headerlink" href="#prg-txi-vac-gauges" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_TXI_VAC_GAUGES</span>
+<span class="n">VAR</span>
+<span class="n">dummy_gauge</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="o">//</span><span class="n">beamline</span> <span class="n">dummy</span> <span class="n">gauge</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">eState</span> <span class="o">:=</span> <span class="n">ValidLo</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">:=</span> <span class="mf">1e-4</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K0S15</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">02</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="n">fb_PC1K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+<span class="n">fb_PC1K3_GCC_02</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K3S23</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="n">fb_TV1K3_GPI_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">=&gt;</span><span class="p">);</span>
+<span class="n">fb_TV1K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">fb_TV1K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">008</span><span class="o">-</span><span class="n">K3S34</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">FEE</span><span class="p">)</span>
+<span class="n">fb_ST1K3_GPI_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">=&gt;</span><span class="p">);</span>
+<span class="n">fb_ST1K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">fb_ST1K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B950</span><span class="o">-</span><span class="mi">100</span><span class="n">H1</span><span class="o">-</span><span class="n">K3S1</span><span class="o">-</span><span class="n">PNL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">H1</span><span class="mf">.1</span><span class="p">)</span>
+<span class="n">fb_TV2K3_GPI_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">=&gt;</span><span class="p">);</span>
+<span class="n">fb_TV2K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">fb_TV2K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="n">fb_TV3K3_GPI_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">=&gt;</span><span class="p">);</span>
+<span class="n">fb_TV3K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">fb_TV2K3_GCC_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B950</span><span class="o">-</span><span class="mi">100</span><span class="o">-</span><span class="n">K3S3</span><span class="o">-</span><span class="n">DRL</span><span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">H1</span><span class="mf">.1</span><span class="p">)</span>
+<span class="n">fb_TV4K3_GPI_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">=&gt;</span><span class="p">);</span>
+<span class="n">fb_TV4K3_GCC_01</span><span class="p">(</span><span class="n">PG</span> <span class="o">:=</span> <span class="n">fb_TV4K3_GCC_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">bEP</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-txi-vac-pumps">
+<h2>PRG_TXI_VAC_PUMPS<a class="headerlink" href="#prg-txi-vac-pumps" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_TXI_VAC_PUMPS</span>
+<span class="n">VAR</span>
+    <span class="n">dummy_gauge</span> <span class="p">:</span> <span class="n">ST_VG</span><span class="p">;</span>
+<span class="n">END_VAR</span>
+<span class="o">//</span><span class="n">beamline</span> <span class="n">dummy</span> <span class="n">gauge</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">xPRESS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">xAT_VAC</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">eState</span> <span class="o">:=</span> <span class="n">ValidLo</span><span class="p">;</span>
+<span class="n">dummy_gauge</span><span class="o">.</span><span class="n">rPRESS</span> <span class="o">:=</span> <span class="mf">1e-4</span><span class="p">;</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">009</span><span class="o">-</span><span class="n">R17</span><span class="o">-</span><span class="n">PCI</span><span class="o">-</span><span class="mi">01</span>
+<span class="n">fb_TV1K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_TV1K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="n">fb_ST1K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_ST1K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="n">fb_PC1K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="n">fb_PC1K3_PIP_02</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_PC1K3_GCC_02</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">009</span><span class="o">-</span><span class="n">R17</span><span class="o">-</span><span class="n">PCI</span><span class="o">-</span><span class="mi">02</span>
+<span class="o">//</span><span class="n">fb_TV2K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_TV2K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="o">//</span><span class="n">fb_TV3K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_TV3K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="o">//</span><span class="n">fb_TV4K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">fb_TV4K3_GPI_01</span><span class="o">.</span><span class="n">PG</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">B940</span><span class="o">-</span><span class="mi">009</span><span class="o">-</span><span class="n">R17</span><span class="o">-</span><span class="n">PCI</span><span class="o">-</span><span class="mi">02</span> <span class="o">-</span> <span class="n">For</span> <span class="n">pump</span> <span class="n">controls</span> <span class="n">meanwhile</span> <span class="n">gauges</span> <span class="n">are</span> <span class="n">installed</span>
+<span class="n">fb_TV2K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="n">fb_TV3K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+<span class="n">fb_TV4K3_PIP_01</span><span class="p">(</span><span class="n">i_stGauge</span> <span class="o">:=</span> <span class="n">dummy_gauge</span><span class="p">,</span> <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+<section id="prg-txi-vac-valves">
+<h2>PRG_TXI_VAC_VALVES<a class="headerlink" href="#prg-txi-vac-valves" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PROGRAM</span> <span class="n">PRG_TXI_VAC_VALVES</span>
+<span class="n">VAR</span>
+<span class="n">END_VAR</span>
+<span class="n">fb_PC1K3_VGC_01</span><span class="p">(</span>
+    <span class="n">i_stUSG</span> <span class="o">:=</span> <span class="n">fb_PC1K3_PIP_02</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span>
+    <span class="n">i_stDSG</span> <span class="o">:=</span> <span class="n">fb_PC1K3_PIP_01</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span>
+    <span class="n">i_xDis_DPIlk</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">,</span>
+    <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+    <span class="n">fbArbiter</span> <span class="o">:=</span> <span class="n">fbArbiter1</span>
+<span class="p">);</span>
+
+<span class="n">fb_TV1K3_VGC_01</span><span class="p">(</span>
+    <span class="n">i_stUSG</span> <span class="o">:=</span> <span class="n">fb_TV1K3_PIP_01</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span>
+    <span class="n">i_stDSG</span> <span class="o">:=</span> <span class="n">fb_ST1K3_PIP_01</span><span class="o">.</span><span class="n">q_IG</span><span class="p">,</span>
+    <span class="n">i_xDis_DPIlk</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
+    <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode1</span><span class="p">,</span>
+    <span class="n">io_fbFFHWO</span> <span class="o">:=</span> <span class="n">g_FastFaultOutput1</span><span class="p">,</span>
+    <span class="n">fbArbiter</span> <span class="o">:=</span> <span class="n">fbArbiter1</span>
+<span class="p">);</span>
+
+<span class="n">END_PROGRAM</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plc-txi-sxr-vac_txi_sxr_vac_epics.html" class="btn btn-neutral float-left" title="Data Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, SLAC National Accelerator Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+GVL_TXI_VAC_GAUGES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+
+    //B940-008-K0S15-PNL-02 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_01^Output '}
+    fb_PC1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_02^Output '}
+    fb_PC1K3_GCC_02: FB_MKS500;
+
+    //B940-008-K3S23-PNL-1 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)^TV1K3_GCC_01^Output  '}
+    fb_TV1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    '}
+    fb_TV1K3_GPI_01: FB_MKS275;
+
+    //B940-008-K3S34-PNL-1 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:ST1L3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)^ST1K3_GCC-01^Output  '}
+    fb_ST1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:ST1L3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   '}
+    fb_ST1K3_GPI_01: FB_MKS275;
+
+    //B950-100H1-K3S1-PNL-1 (H1.1)
+    fb_TV2K3_GCC_01: FB_MKS500;
+    fb_TV2K3_GPI_01: FB_MKS275;
+
+    fb_TV3K3_GCC_01: FB_MKS500;
+    fb_TV3K3_GPI_01: FB_MKS275;
+
+    //B950-100-K3S3-DRL-1 (H1.1)
+    fb_TV4K3_GCC_01: FB_MKS500;
+    fb_TV4K3_GPI_01: FB_MKS275;
+
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_PUMPS
+^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+
+    //B940-009-R17-PCI-01
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^TV1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^TV1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^TV1K3_PIP_01^Input '
+    }
+    fb_TV1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:ST1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^ST1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^ST1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^ST1K3_PIP_01^Input '
+    }
+    fb_ST1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_01^Input '
+    }
+    fb_PC1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:PIP:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_02^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_02^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_02^Input '
+    }
+    fb_PC1K3_PIP_02: FB_PIP_GAMMA;
+
+    //B940-009-R17-PCI-02
+    {attribute 'pytmc' := ' pv: TXI:TV2K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV2K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV2K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV2K3_PIP_01^Input '
+    }
+    fb_TV2K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:TV3K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV3K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV3K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV3K3_PIP_01^Input '
+    }
+    fb_TV3K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:TV4K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV4K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV4K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV4K3_PIP_01^Input '
+    }
+    fb_TV4K3_PIP_01: FB_PIP_GAMMA;
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_VALVES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    //FEE Valves
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 1^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 11^Output'}
+    {attribute 'pytmc' := ' pv: PC1K3:VGC:01 '}
+    fb_PC1K3_VGC_01 : FB_VGC;
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 1^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 11^Output'}
+    {attribute 'pytmc' := ' pv: TV1K3:VGC:01 '}
+    fb_TV1K3_VGC_01 : FB_VGC;
+    //H1.1 Valves
+    {attribute 'pytmc' := ' pv: TV2K3:VGC:01 '}
+    fb_TV2K3_VGC_01 : FB_VGC;
+    {attribute 'pytmc' := ' pv: TV4K3:VGC:01 '}
+    fb_TV4K3_VGC_01 : FB_VGC;
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_VARIABLES
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    {attribute 'pytmc' := 'pv: TXI:SXR:FEE:VAC:OVRDON;
+        field: ZNAM Override OFF;
+        field: ONAM Override ON;
+        io: io;
+    '}
+    xSystemOverrideMode1 : BOOL; (* Global system override for the prototype section*)
+
+    {attribute 'pytmc' := ' pv: PLC:TXI:VAC:FFO:01 '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
+    g_FastFaultOutput1  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1'); // change i_sNetID ??
+
+    {attribute 'pytmc' := ' pv: PLC:TXI:VAC:ARB:01 '}
+    fbArbiter1 : FB_Arbiter(1);
+
+    fbLogHandler : FB_loghandler;
+
+    END_VAR
+
+
+
+
+POUs
+----
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+    VAR
+    END_VAR
+    PRG_TXI_VAC_GAUGES();
+    PRG_TXI_VAC_PUMPS();
+    PRG_TXI_VAC_VALVES();
+
+    END_PROGRAM
+
+
+Related:
+    * `PRG_TXI_VAC_GAUGES`_
+    * `PRG_TXI_VAC_PUMPS`_
+    * `PRG_TXI_VAC_VALVES`_
+
+
+PRG_TXI_VAC_GAUGES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_GAUGES
+    VAR
+    dummy_gauge : ST_VG;
+    END_VAR
+    //beamline dummy gauge
+    dummy_gauge.xPRESS_OK := TRUE;
+    dummy_gauge.xAT_VAC := TRUE;
+    dummy_gauge.eState := ValidLo;
+    dummy_gauge.rPRESS := 1e-4;
+
+    //B940-008-K0S15-PNL-02 (FEE)
+    fb_PC1K3_GCC_01(PG := dummy_gauge, bEP := TRUE);
+    fb_PC1K3_GCC_02(PG := dummy_gauge, bEP := TRUE);
+
+    //B940-008-K3S23-PNL-1 (FEE)
+    fb_TV1K3_GPI_01(PG =>);
+    fb_TV1K3_GCC_01(PG := fb_TV1K3_GPI_01.PG, bEP := TRUE);
+
+    //B940-008-K3S34-PNL-1 (FEE)
+    fb_ST1K3_GPI_01(PG =>);
+    fb_ST1K3_GCC_01(PG := fb_ST1K3_GPI_01.PG, bEP := TRUE);
+
+    //B950-100H1-K3S1-PNL-1 (H1.1)
+    fb_TV2K3_GPI_01(PG =>);
+    fb_TV2K3_GCC_01(PG := fb_TV2K3_GPI_01.PG, bEP := TRUE);
+
+    fb_TV3K3_GPI_01(PG =>);
+    fb_TV3K3_GCC_01(PG := fb_TV2K3_GCC_01.PG, bEP := TRUE);
+
+    //B950-100-K3S3-DRL-1 (H1.1)
+    fb_TV4K3_GPI_01(PG =>);
+    fb_TV4K3_GCC_01(PG := fb_TV4K3_GCC_01.PG, bEP := TRUE);
+
+    END_PROGRAM
+
+
+
+
+PRG_TXI_VAC_PUMPS
+^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_PUMPS
+    VAR
+        dummy_gauge : ST_VG;
+    END_VAR
+    //beamline dummy gauge
+    dummy_gauge.xPRESS_OK := TRUE;
+    dummy_gauge.xAT_VAC := TRUE;
+    dummy_gauge.eState := ValidLo;
+    dummy_gauge.rPRESS := 1e-4;
+
+    //B940-009-R17-PCI-01
+    fb_TV1K3_PIP_01(i_stGauge := fb_TV1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    fb_ST1K3_PIP_01(i_stGauge := fb_ST1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    fb_PC1K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_PC1K3_PIP_02(i_stGauge := fb_PC1K3_GCC_02.PG, i_xOverrideMode := xSystemOverrideMode1);
+
+    //B940-009-R17-PCI-02
+    //fb_TV2K3_PIP_01(i_stGauge := fb_TV2K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    //fb_TV3K3_PIP_01(i_stGauge := fb_TV3K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    //fb_TV4K3_PIP_01(i_stGauge := fb_TV4K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+
+    //B940-009-R17-PCI-02 - For pump controls meanwhile gauges are installed
+    fb_TV2K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_TV3K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_TV4K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+
+    END_PROGRAM
+
+
+
+
+PRG_TXI_VAC_VALVES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_VALVES
+    VAR
+    END_VAR
+    fb_PC1K3_VGC_01(
+        i_stUSG := fb_PC1K3_PIP_02.q_IG,
+        i_stDSG := fb_PC1K3_PIP_01.q_IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := g_FastFaultOutput1,
+        fbArbiter := fbArbiter1
+    );
+
+    fb_TV1K3_VGC_01(
+        i_stUSG := fb_TV1K3_PIP_01.q_IG,
+        i_stDSG := fb_ST1K3_PIP_01.q_IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := g_FastFaultOutput1,
+        fbArbiter := fbArbiter1
+    );
+
+    END_PROGRAM
+
+
+
