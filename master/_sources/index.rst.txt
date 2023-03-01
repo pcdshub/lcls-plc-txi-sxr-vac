@@ -1,0 +1,30 @@
+lcls-plc-txi-sxr-vac
+--------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: plc-txi-sxr-vac
+
+    plc-txi-sxr-vac_pragmas
+    plc-txi-sxr-vac_nc
+    plc-txi-sxr-vac_ethercat
+    plc-txi-sxr-vac_boxes
+    plc-txi-sxr-vac_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: txi_sxr_vac
+
+    plc-txi-sxr-vac_txi_sxr_vac_summary
+    plc-txi-sxr-vac_txi_sxr_vac_epics
+    plc-txi-sxr-vac_txi_sxr_vac_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

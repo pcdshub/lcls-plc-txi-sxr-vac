@@ -1,0 +1,796 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+GVL_H2
+^^^^^^
+
+::
+
+    VAR_GLOBAL
+
+    //B950-1.2-PNL temp (H1.2)
+    {attribute 'pytmc' := ' pv: TXI:TV5K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H2K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value;
+                                     .q_xHV_DIS			:=	TIIB[H2K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 1^Output
+    '}
+    fb_TV5K3_GCC_01: FB_MKS500;
+
+
+    //H1.2 Valves
+    {attribute 'pytmc' := ' pv: TV5K3:VGC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+    '}
+    fb_TV5K3_VGC_01 : FB_VGC;
+
+    {attribute 'pytmc' := ' pv: YAGK3:MPA:01 '}
+    {attribute 'TcLinkTo' := 	'.q_xInsert_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 13^Output
+    '}
+    YAGK3_01:FB_MPA;
+
+    END_VAR
+
+
+Related:
+    * `FB_MPA`_
+
+
+GVL_PMPS
+^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL
+
+    {attribute 'pytmc' := ' pv: PLC:TXI:VAC:FFO:01 '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
+    g_FastFaultOutput1  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1'); // change i_sNetID ??
+
+    {attribute 'pytmc' := ' pv: PLC:TXI:VAC:FFO:02 '}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
+    g_FastFaultOutput2  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1'); // change i_sNetID ??
+
+
+    {attribute 'pytmc' := ' pv: PLC:TXI:VAC:ARB:01 '}
+    fbArbiter1 : FB_Arbiter(1);
+
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_GAUGES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    //B940-008-K0S15-PNL-02 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_01^Output '}
+    fb_PC1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)^PC1K3_GCC_02^Output '}
+    fb_PC1K3_GCC_02: FB_MKS500;
+
+    //B940-008-K3S23-PNL-1 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GCC_01^Value    '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)^TV1K3_GCC_01^Output  '}
+    fb_TV1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)^TV1K3_GPI_01^Value    '}
+    fb_TV1K3_GPI_01: FB_MKS275;
+
+    //B940-008-K3S34-PNL-1 (FEE)
+    {attribute 'pytmc' := ' pv: TXI:ST1K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1L3_GCC_01^Value   '}
+    {attribute 'TcLinkTo' := 	'.q_xHV_DIS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)^ST1K3_GCC-01^Output  '}
+    fb_ST1K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:ST1K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)^ST1K3_GPI_01^Value   '}
+    fb_ST1K3_GPI_01: FB_MKS275;
+
+    //B950-100H1-K3S1-PNL-1 (H1.1)
+    {attribute 'pytmc' := ' pv: TXI:TV2K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 2^Value;
+                                     .q_xHV_DIS			:=	TIIB[H1K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 2^Output
+    '}
+    fb_TV2K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:TV2K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value   '}
+    fb_TV2K3_GPI_01: FB_MKS275;
+    {attribute 'pytmc' := ' pv: TXI:TV3K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 4^Value;
+                                     .q_xHV_DIS			:=	TIIB[H1K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 4^Output
+    '}
+    fb_TV3K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:TV3K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 3^Value   '}
+    fb_TV3K3_GPI_01: FB_MKS275;
+
+    //B950-100-K3S3-DRL-1 (H1.1)
+    {attribute 'pytmc' := ' pv: TXI:TV4K3:GCC:01 '}
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S03-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 2^Value;
+                                     .q_xHV_DIS			:=	TIIB[H1K3S03-PNL-01 EP3 (EP2624-0002)]^Channel 2^Output
+    '}
+    fb_TV4K3_GCC_01: FB_MKS500;
+    {attribute 'pytmc' := ' pv: TXI:TV4K3:GPI:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S03-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value   '}
+    fb_TV4K3_GPI_01: FB_MKS275;
+
+
+    {attribute 'pytmc' := ' pv: TXI:TV4K3:GFS:01 '}
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[E1 (EL3064)]^AI Standard Channel 1^Value;
+                                     .q_xHV_DIS			:=	TIIB[E3 (EL2794)]^Channel 1^Output
+    '}
+    fb_TV4K3_GFS_01: FB_MKS422;
+
+
+
+
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_PUMPS
+^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    //B940-009-R17-PCI-01
+    {attribute 'pytmc' := ' pv: TXI:TV1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^TV1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^TV1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^TV1K3_PIP_01^Input '
+    }
+    fb_TV1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:ST1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^ST1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^ST1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^ST1K3_PIP_01^Input '
+    }
+    fb_ST1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_01^Input '
+    }
+    fb_PC1K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:PC1K3:PIP:02 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^PC1K3_PIP_02^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)^PC1K3_PIP_02^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)^PC1K3_PIP_02^Input '
+    }
+    fb_PC1K3_PIP_02: FB_PIP_GAMMA;
+
+    //B940-009-R17-PCI-02
+    {attribute 'pytmc' := ' pv: TXI:TV2K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV2K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV2K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV2K3_PIP_01^Input '
+    }
+    fb_TV2K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:TV3K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV3K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV3K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV3K3_PIP_01^Input '
+    }
+    fb_TV3K3_PIP_01: FB_PIP_GAMMA;
+
+    {attribute 'pytmc' := ' pv: TXI:TV4K3:PIP:01 '}
+    {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)^TV4K3_PIP_01^Value  ';
+                          :=	'.q_xHVEna_DO 	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)^TV4K3_PIP_01^Output ';
+                          := 	'.i_xSP_DI		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)^TV4K3_PIP_01^Input '
+    }
+    fb_TV4K3_PIP_01: FB_PIP_GAMMA;
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_VALVES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+
+    //FEE Valves
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 1^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 11^Output'}
+    {attribute 'pytmc' := ' pv: PC1K3:VGC:01 '}
+    fb_PC1K3_VGC_01 : FB_VGC;
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 1^Input;
+                                 .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)^Channel 11^Output'}
+    {attribute 'pytmc' := ' pv: TV1K3:VGC:01 '}
+    fb_TV1K3_VGC_01 : FB_VGC;
+    //H1.1 Valves
+    {attribute 'pytmc' := ' pv: TV2K3:VGC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+    '}
+
+    fb_TV2K3_VGC_01 : FB_VGC;
+    {attribute 'pytmc' := ' pv: TV4K3:VGC:01 '}
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+    '}
+    fb_TV4K3_VGC_01 : FB_VGC;
+
+
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_VARIABLES
+^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    {attribute 'pytmc' := 'pv: TXI:SXR:FEE:VAC:OVRDON;
+        field: ZNAM Override OFF;
+        field: ONAM Override ON;
+        io: io;
+    '}
+    xSystemOverrideMode1 : BOOL; (* Global system override for the prototype section*)
+
+    fbLogHandler : FB_loghandler;
+    {attribute 'TcLinkTo' := 'TIIB[E3 (EL2794)]^Channel 4^Output'}
+    qPC1K3_PIP_01_Press_OK AT %Q*:BOOL;
+    END_VAR
+
+
+
+
+GVL_TXI_VAC_VFS
+^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+    {attribute 'pytmc' := '
+       pv: TV2K3:VFS:01
+    '}
+    TV2K3_VFS_01_Interface : FB_VFS_Interface;
+
+    {attribute 'TcLinkTo' := 	'
+        .q_xClose_A	:=	TIIB[H1K3S01-DRL-01 E1 (EL2202)]^Channel 1^Output;
+        .q_xClose_B	:=	TIIB[H1K3S01-DRL-01 E1 (EL2202)]^Channel 2^Output;
+        .q_xClose_C	:=	TIIB[H1K3S01-DRL-01 E2 (EL2202)]^Channel 1^Output;
+        .q_xOPN_DO	:=	TIIB[H1K3S01-DRL-01 E2 (EL2202)]^Channel 2^Output;
+        .i_xClsLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 1^Input;
+        .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;;
+        .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input;
+        .i_xPress_OK		:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK;
+        .i_xOPN_SW			:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW;
+        .i_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW;
+        .i_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset;
+        .i_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode;
+        .i_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen;
+        .q_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger;
+        .q_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open;
+        .q_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed;
+        .q_xVAC_FAULT_OK	:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK;
+        .q_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK;
+        .q_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State;
+        .i_xVetoValveOpenDO := ;
+        .i_xVetoValveClosed :=
+    '}
+    TV2K3_VFS_01 : FB_VFS;
+
+    END_VAR
+
+
+
+
+POUs
+----
+
+
+FB_MPA
+^^^^^^
+
+::
+
+    FUNCTION_BLOCK FB_MPA
+    (*This function blcok implements a pnuematic actuator. That can be signle or double acting by setting the ibSingleCntrl accordingly*)
+    (* with double acting ibCntrlHold signal should be false, while with single acting the signal should be true*)
+    VAR_INPUT
+        (*EPS Interlock Bits*)
+        ibInsertOK: BOOL; (*Actuator can be Inserted*)
+        ibRetractOK: BOOL; (*ACtuator can be retracted*)
+        ibPMPS_OK:BOOL; (*to be linked the Arbiter bit*)
+        ibSingleCntrl:BOOL;(* TRUE if Actuator requires one Output signal to be activated, FALSE if its double acting i.e two outputs are required*)
+        ibCntrlHold:BOOL; (* Control Signal must retain its value, must be TRUE in the case of single acting*)
+        ibOverrideInterlock:BOOL; (*if true interlocks are ignored*)
+        // Reset fault
+        {attribute 'pytmc' := '
+        pv: FFO_Reset
+        '}
+        i_xReset: BOOL;
+        {attribute 'pytmc' := '
+        pv: FFO_AutoReset
+        '}
+        i_xAutoReset: BOOL;
+    END_VAR
+    VAR_OUTPUT
+        {attribute 'pytmc' := '
+        pv:
+        '}
+        stPneumaticActuator    :    ST_MotionPneumaticActuator;
+        {attribute 'pytmc' := '
+         pv: MPS_OK
+         field: ZNAM FALSE
+         field: ONAM TRUE
+         field: DESC TRUE if MPS signal is OK
+        '}
+        xMPS_OK:BOOL;
+    END_VAR
+    VAR_IN_OUT
+        io_fbFFHWO    :    FB_HardwareFFOutput;
+    END_VAR
+    VAR
+        // PMPS
+        fbFF    :    FB_FastFault :=(
+            i_DevName := 'MPA',
+            i_Desc := 'Fault occurs when the device is moving',
+            i_TypeCode := E_MotionFFType.PNEUMATIC_MOVE);
+
+        (*Init*)
+        xFirstPass    :    BOOL;
+        fbFSInit        :    R_TRIG;
+
+        (* Timeouts*)
+        tTimeOutDuration: TIME:= T#10S;
+        tInserttimeout: TON;
+        tRetracttimeout:TON;
+        (*Limit switch latch timer*)
+        tLimitSwitchLatchDuration: TIME:=T#1S;
+        tInsertLimitSwitch:TON;
+        tRetractLimitSwitch:TON;
+
+        (*Logging*)
+        fbLogger : FB_LogMessage := (eSubsystem:=E_SubSystem.MOTION);
+        ePrevState : E_PnuematicActuatorPositionState;
+        tAction : R_TRIG; // Primary action of this device (Insert_DO, Retract_DO, etc.)
+        tOverrideActivated : R_TRIG;
+
+        (*IO*)
+        i_xInsertedLS    AT%I*: BOOL;
+        i_xRetractedLS    AT%I*: BOOL;
+        q_xInsert_DO    AT%Q*: BOOL;
+        q_xRetract_DO    AT%Q*: BOOL;
+
+    END_VAR
+    (*Initialize*)
+    fbFSInit( CLK := TRUE, Q => xFirstPass);
+    IF xFirstPass THEN
+        stPneumaticActuator.eState := E_PnuematicActuatorPositionState.INVALID;
+        stPneumaticActuator.bRetract_SW := FALSE;
+        stPneumaticActuator.bInsert_SW := FALSE;
+    END_IF
+
+    (*Soft IO Mapping to EPICS PVs*)
+    ACT_IO();
+
+    (* Manage States*)
+    IF stPneumaticActuator.i_bInLimitSwitch AND  stPneumaticActuator.i_bOutLimitSwitch THEN
+        stPneumaticActuator.eState:=E_PnuematicActuatorPositionState.INVALID;
+    ELSIF NOT stPneumaticActuator.i_bInLimitSwitch AND stPneumaticActuator.i_bOutLimitSwitch THEN
+        stPneumaticActuator.eState:=E_PnuematicActuatorPositionState.RETRACTED;
+    ELSIF stPneumaticActuator.i_bInLimitSwitch AND NOT stPneumaticActuator.i_bOutLimitSwitch THEN
+        stPneumaticActuator.eState:=E_PnuematicActuatorPositionState.INSERTED;
+    ELSIF NOT stPneumaticActuator.i_bInLimitSwitch AND NOT stPneumaticActuator.i_bOutLimitSwitch THEN
+        stPneumaticActuator.eState:=E_PnuematicActuatorPositionState.MOVING;
+    ELSE
+        stPneumaticActuator.eState:=E_PnuematicActuatorPositionState.INVALID ;
+    END_IF
+
+    (*Set the Done/Busy signal*)
+    stPneumaticActuator.bDone := (stPneumaticActuator.bRetract_SW AND stPneumaticActuator.eState=E_PnuematicActuatorPositionState.RETRACTED)
+                                OR (stPneumaticActuator.bInsert_SW AND stPneumaticActuator.eState=E_PnuematicActuatorPositionState.INSERTED);
+    stPneumaticActuator.bBusy := (stPneumaticActuator.bRetract_SW AND stPneumaticActuator.eState<>E_PnuematicActuatorPositionState.RETRACTED)
+                                OR (stPneumaticActuator.bInsert_SW AND stPneumaticActuator.eState<>E_PnuematicActuatorPositionState.INSERTED);
+    (*MPS FAULT*)
+    (* MPS Faults when the actuator is in motion*)
+    xMPS_OK := (stPneumaticActuator.eState=E_PnuematicActuatorPositionState.RETRACTED) OR (stPneumaticActuator.eState=E_PnuematicActuatorPositionState.INSERTED);
+    (*PMPS PERMISSION*)
+    // yet to be implemented
+
+    (* Can't have bRetract_SW and  bInsert_SW both be true*)
+    If (stPneumaticActuator.bRetract_SW) AND (stPneumaticActuator.bInsert_SW) THEN
+        stPneumaticActuator.bRetract_SW := FALSE;
+        stPneumaticActuator.bInsert_SW := FALSE;
+    END_IF
+    //Redundant??
+    (*Check if both digital outputs active at the same time, and clear all*)
+    IF stPneumaticActuator.q_bInsert THEN
+        stPneumaticActuator.q_bRetract := FALSE;
+        stPneumaticActuator.bRetract_SW:= FALSE;
+    END_IF;
+    IF stPneumaticActuator.q_bRetract THEN
+        stPneumaticActuator.q_bInsert := FALSE;
+        stPneumaticActuator.bInsert_SW:= FALSE;
+    END_IF;
+
+    (*Actuate the device*)
+    stPneumaticActuator.q_bRetract := stPneumaticActuator.bRetractOK AND stPneumaticActuator.bRetract_SW AND NOT stPneumaticActuator.bInsert_SW ;
+    stPneumaticActuator.q_bInsert := stPneumaticActuator.bInsertOK AND stPneumaticActuator.bInsert_SW AND NOT stPneumaticActuator.bRetract_SW ;
+
+    (*Reset the Control signal when command has been executed and give time to ensure the actuator is fully seated in either direction*)
+    IF (NOT ibSingleCntrl AND NOT ibCntrlHold) THEN
+       IF (stPneumaticActuator.bRetract_SW AND stPneumaticActuator.i_bOutLimitSwitch AND tRetractLimitSwitch.Q ) THEN stPneumaticActuator.q_bRetract := FALSE; END_IF
+       IF (stPneumaticActuator.bInsert_SW AND stPneumaticActuator.i_bInLimitSwitch AND tInsertLimitSwitch.Q) THEN stPneumaticActuator.q_bInsert := FALSE; END_IF
+    END_IF
+
+    (*Timers*)
+    tInserttimeout(IN:= stPneumaticActuator.q_bInsert, PT := tTimeOutDuration );
+    tRetracttimeout(IN:= stPneumaticActuator.q_bRetract, PT := tTimeOutDuration);
+    tInsertLimitSwitch(IN:= stPneumaticActuator.i_bInLimitSwitch, PT := tLimitSwitchLatchDuration);
+    tRetractLimitSwitch(IN:= stPneumaticActuator.i_bOutLimitSwitch, PT := tLimitSwitchLatchDuration);
+
+
+    ///Check moving postion timout
+    IF NOT stPneumaticActuator.i_bInLimitSwitch AND tInserttimeout.Q THEN
+        stPneumaticActuator.bError := TRUE;
+        stPneumaticActuator.sErrorMessage:= 'Actuator insert timeout';
+    ELSIF NOT stPneumaticActuator.i_bOutLimitSwitch AND tRetracttimeout.Q THEN
+        stPneumaticActuator.bError := TRUE;
+        stPneumaticActuator.sErrorMessage:= 'Actuator retract timeout';
+    END_IF
+    // Reset error
+    stPneumaticActuator.bError R= stPneumaticActuator.bReset;
+
+    (*FAST FAULT*)
+    fbFF(i_xOK := xMPS_OK,
+        i_xReset := i_xReset,
+        i_xAutoReset := i_xAutoReset,
+        io_fbFFHWO := io_fbFFHWO);
+
+    (*Soft IO Mapping to Epics pvs*)
+    ACT_IO();
+
+    END_FUNCTION_BLOCK
+
+    ACTION ACT_IO:
+    (*Inputs*)
+    stPneumaticActuator.i_bInLimitSwitch :=  q_xInsert_DO;
+    stPneumaticActuator.i_bOutLimitSwitch := NOT q_xInsert_DO;
+
+    (*outputs*)
+    q_xInsert_DO:=stPneumaticActuator.q_bInsert;
+    q_xRetract_DO:=stPneumaticActuator.q_bRetract;
+
+    (*EPICS*)
+    stPneumaticActuator.bRetractOK := ibRetractOK;
+    stPneumaticActuator.bInsertOK := ibInsertOK;
+    END_ACTION
+
+
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+    VAR
+    END_VAR
+    PRG_TXI_VAC_GAUGES();
+    PRG_TXI_VAC_PUMPS();
+    PRG_TXI_VAC_VALVES();
+    PRG_PMPS();
+    fbLogHandler();
+
+
+    //
+    PRG_H2();
+
+    END_PROGRAM
+
+
+Related:
+    * `PRG_H2`_
+    * `PRG_PMPS`_
+    * `PRG_TXI_VAC_GAUGES`_
+    * `PRG_TXI_VAC_PUMPS`_
+    * `PRG_TXI_VAC_VALVES`_
+
+
+PRG_H2
+^^^^^^
+
+::
+
+    PROGRAM PRG_H2
+    VAR
+        g_FastFaultOutputNA  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1');
+        fbArbiter1NA : FB_Arbiter(0);
+        gpi_NA : ST_VG;
+    END_VAR
+    gpi_NA.xPRESS_OK := TRUE;
+    gpi_NA.xAT_VAC := TRUE;
+    gpi_NA.eState := ValidLo;
+    gpi_NA.rPRESS := 1e-4;
+
+    //H2
+    fb_TV5K3_VGC_01(
+        i_stUSG := fb_TV4K3_GCC_01.IG,
+        i_stDSG := fb_TV5K3_GCC_01.IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE ,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := g_FastFaultOutputNA,
+        fbArbiter := fbArbiter1NA
+    );
+
+    fb_TV5K3_GCC_01(PG := gpi_NA, bEP := TRUE);
+
+
+    YAGK3_01(
+        ibInsertOK:= TRUE,
+        ibRetractOK:= TRUE,
+        ibPMPS_OK:=TRUE ,
+        ibSingleCntrl:= TRUE,
+        ibCntrlHold:=TRUE ,
+        ibOverrideInterlock:= ,
+        i_xReset:= ,
+        i_xAutoReset:= ,
+        stPneumaticActuator=> ,
+        xMPS_OK=> ,
+        io_fbFFHWO:= g_FastFaultOutputNA);
+
+    END_PROGRAM
+
+
+
+
+PRG_PMPS
+^^^^^^^^
+
+::
+
+    PROGRAM PRG_PMPS
+    VAR
+        fbArbiterIO: FB_SubSysToArbiter_IO;
+
+        {attribute 'TcLinkTo' := 'TIIB[PMPS_PRE]^IO Outputs^FFO'}
+        FFO AT %Q*:BOOL; //temp code until faults are in MPS crate
+    END_VAR
+    GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                           OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_OUT]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN],
+                                            bAutoReset:= TRUE );
+    GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                           OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_OUT]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN],
+                                        bAutoReset:= TRUE );
+
+    //Code for Requesting full beam arbitration
+    GVL_PMPS.fbArbiter1.AddRequest(nReqID := 16#FAF8, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-kfe-txi-vac');
+    fbArbiterIO(
+        i_bVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                           OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
+                                          AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT],
+        Arbiter:=GVL_PMPS.fbArbiter1,
+        fbFFHWO:=GVL_PMPS.g_FastFaultOutput1);
+
+
+    //TEMP FFO to arbiter
+    FFO:= GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut AND GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut;
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
+
+
+PRG_TXI_VAC_GAUGES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_GAUGES
+    VAR
+    dummy_gauge : ST_VG;
+    END_VAR
+    //beamline dummy gauge
+    //should read from kfe-vac
+    dummy_gauge.xPRESS_OK := TRUE;
+    dummy_gauge.xAT_VAC := TRUE;
+    dummy_gauge.eState := ValidLo;
+    dummy_gauge.rPRESS := 1e-4;
+
+    //B940-008-K0S15-PNL-02 (FEE)
+    fb_PC1K3_GCC_01(PG := dummy_gauge, bEP := TRUE);
+    fb_PC1K3_GCC_02(PG := dummy_gauge, bEP := TRUE);
+
+    //B940-008-K3S23-PNL-1 (FEE)
+    fb_TV1K3_GPI_01(PG =>);
+    fb_TV1K3_GCC_01(PG := fb_TV1K3_GPI_01.PG, bEP := TRUE);
+
+    //B940-008-K3S34-PNL-1 (FEE)
+    fb_ST1K3_GPI_01(PG =>);
+    fb_ST1K3_GCC_01(PG := fb_ST1K3_GPI_01.PG, bEP := TRUE);
+
+    //B950-100H1-K3S1-PNL-1 (H1.1)
+    fb_TV2K3_GPI_01(PG =>);
+    fb_TV2K3_GCC_01(PG := fb_TV2K3_GPI_01.PG, bEP := TRUE);
+
+    fb_TV3K3_GPI_01(PG =>);
+    fb_TV3K3_GCC_01(PG := fb_TV3K3_GPI_01.PG, bEP := TRUE);
+
+    //B950-100-K3S3-DRL-1 (H1.1)
+    fb_TV4K3_GPI_01(PG =>);
+    fb_TV4K3_GCC_01(PG := fb_TV4K3_GPI_01.PG, bEP := TRUE);
+
+
+    fb_TV4K3_GFS_01(PG:=fb_TV4K3_GPI_01.PG, b937A:=FALSE , tRecoverDelay:= , IG=> );
+
+    END_PROGRAM
+
+
+
+
+PRG_TXI_VAC_PUMPS
+^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_PUMPS
+    VAR
+        dummy_gauge : ST_VG;
+    END_VAR
+    //beamline dummy gauge
+
+    dummy_gauge.xPRESS_OK := TRUE;
+    dummy_gauge.xAT_VAC := TRUE;
+    dummy_gauge.eState := ValidLo;
+    dummy_gauge.rPRESS := 1e-4;
+
+    //B940-009-R17-PCI-01
+    fb_TV1K3_PIP_01(i_stGauge := fb_TV1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    fb_ST1K3_PIP_01(i_stGauge := fb_ST1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    fb_PC1K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_PC1K3_PIP_02(i_stGauge := fb_PC1K3_GCC_02.PG, i_xOverrideMode := xSystemOverrideMode1);
+    qPC1K3_PIP_01_Press_OK := fb_PC1K3_PIP_02.q_IG.xPRESS_OK;
+
+    //B940-009-R17-PCI-02
+    //fb_TV2K3_PIP_01(i_stGauge := fb_TV2K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    //fb_TV3K3_PIP_01(i_stGauge := fb_TV3K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+    //fb_TV4K3_PIP_01(i_stGauge := fb_TV4K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
+
+    //B940-009-R17-PCI-02 - For pump controls meanwhile gauges are installed
+    fb_TV2K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_TV3K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+    fb_TV4K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
+
+    END_PROGRAM
+
+
+
+
+PRG_TXI_VAC_VALVES
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_TXI_VAC_VALVES
+    VAR
+    END_VAR
+    //FEE
+    fb_PC1K3_VGC_01(
+        i_stUSG := fb_PC1K3_PIP_02.q_IG,
+        i_stDSG := fb_PC1K3_PIP_01.q_IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+        fbArbiter := GVL_PMPS.fbArbiter1
+    );
+
+    fb_TV1K3_VGC_01(
+        i_stUSG := fb_TV1K3_PIP_01.q_IG,
+        i_stDSG := fb_ST1K3_PIP_01.q_IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+        fbArbiter := GVL_PMPS.fbArbiter1
+    );
+    //H1
+    fb_TV2K3_VGC_01(
+        i_stUSG := fb_ST1K3_PIP_01.q_IG,
+        i_stDSG := fb_TV2K3_PIP_01.q_IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+        fbArbiter := GVL_PMPS.fbArbiter1
+    );
+
+    fb_TV4K3_VGC_01(
+        i_stUSG := fb_TV3K3_GCC_01.IG,
+        i_stDSG := fb_TV4K3_GCC_01.IG,
+        i_xDis_DPIlk := FALSE,
+        i_xEPS_OK := TRUE,
+        i_xPMPS_OK := TRUE,
+        i_xExt_OK := TRUE,
+        i_xOverrideMode := xSystemOverrideMode1,
+        io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+        fbArbiter := GVL_PMPS.fbArbiter1
+    );
+
+
+
+    // VFS ValvesK3
+    TV2K3_VFS_01_Interface(IG := fb_TV4K3_GFS_01.IG);
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
+
+
+PRG_VFS
+^^^^^^^
+
+::
+
+    PROGRAM PRG_VFS
+    VAR
+    END_VAR
+    //Fast Shutter Valve
+    //H1
+    TV2K3_VFS_01(
+        i_xVeto_Enable:=False,
+        i_xPMPS_OK:= TRUE,
+        i_xExt_OK:= TRUE,
+        i_sDevName:= 'TV2K3:VFS:01',
+        io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput2
+        );
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
+
