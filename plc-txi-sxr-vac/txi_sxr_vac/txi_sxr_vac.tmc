@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{A61DF61D-F1FB-9201-5D8C-45DBCE6F1EE2}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2A3F1F69-0FE7-B3B0-23A6-B4E56B60383F}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
@@ -31516,6 +31516,45 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
             </Properties>
             <BitOffs>635916168</BitOffs>
           </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908168</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xDisc_Active</Name>
+            <Comment> Discharge Current Active // 'TcLinkTo' (EL1124) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908176</BitOffs>
+          </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
@@ -31758,6 +31797,19 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
               </Property>
             </Properties>
             <BitOffs>635916552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>646908160</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -38495,7 +38547,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
           </Symbol>
           <Symbol>
             <Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1</Name>
-            <Comment> change i_sNetID</Comment>
+            <Comment> change i_sNetID ??</Comment>
             <BitSize>494912</BitSize>
             <BaseType Namespace="PMPS">FB_HardwareFFOutput</BaseType>
             <Default>
@@ -39252,6 +39304,25 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
             <BitOffs>642720896</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02</Name>
+            <BitSize>88000</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_MKS500</BaseType>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value> pv: TXI:PC1K3:GCC:02 </Value>
+              </Property>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_02^Value  </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>646820544</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>PRG_TXI_VAC_PUMPS.dummy_gauge</Name>
             <BitSize>1056</BitSize>
             <BaseType Namespace="LCLS_Vacuum">ST_VG</BaseType>
@@ -39331,7 +39402,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2022-10-06T09:54:43</Value>
+          <Value>2022-10-12T13:15:01</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
@@ -39339,7 +39410,7 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80027648</Value>
+          <Value>80035840</Value>
         </Property>
       </Properties>
     </Module>
