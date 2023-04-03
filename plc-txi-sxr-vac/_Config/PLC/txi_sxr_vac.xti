@@ -221,8 +221,30 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI</Name>
 					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -241,28 +263,6 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -339,10 +339,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -356,6 +352,10 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
