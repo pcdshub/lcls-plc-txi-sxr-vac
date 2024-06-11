@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <POU Name="PRG_VFS" Id="{44a96bd7-db4e-4158-b32e-0c3edb6ec23b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_VFS
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Fast Shutter Valve
+
+TV2K3_VFS_01(
+    i_xVeto_Enable:=False,
+    i_xPMPS_OK:= TRUE,
+    i_xExt_OK:= TRUE,
+    i_sDevName:= 'TV2K3:VFS:01',
+    io_fbFFHWO:= g_FastFaultOutput1
+	);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -21,6 +21,9 @@
     <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FSV_task.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL_TXI_VAC_GAUGES.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -37,6 +40,10 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
+    <Compile Include="GVLs\GVL_TXI_VAC_VFS.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -50,6 +57,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_TXI_VAC_VALVES.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_VFS.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_TXI_VAC_VALVES" Id="{49153936-06c3-4261-b5ef-2e49a6d9a655}">
     <Declaration><![CDATA[VAR_GLOBAL
 //FEE Valves
@@ -15,9 +15,26 @@ fb_PC1K3_VGC_01 : FB_VGC;
 fb_TV1K3_VGC_01 : FB_VGC;
 //H1.1 Valves
 {attribute 'pytmc' := ' pv: TV2K3:VGC:01 '}
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                             .i_xClsLS	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                             .q_xOPN_DO	:=	TIIB[H1K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+'}
+
 fb_TV2K3_VGC_01 : FB_VGC;
 {attribute 'pytmc' := ' pv: TV4K3:VGC:01 '}
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                             .i_xClsLS	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                             .q_xOPN_DO	:=	TIIB[H1K3S03-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+'}
 fb_TV4K3_VGC_01 : FB_VGC;
+
+//H1.2 Valves
+{attribute 'pytmc' := ' pv: TV5K3:VGC:01 '}
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                             .i_xClsLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                             .q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+'}
+fb_TV5K3_VGC_01 : FB_VGC;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
