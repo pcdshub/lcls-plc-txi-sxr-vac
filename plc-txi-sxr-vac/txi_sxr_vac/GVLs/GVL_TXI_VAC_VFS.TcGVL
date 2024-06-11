@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_TXI_VAC_VFS" Id="{b5e2500d-8c0a-4623-a4a8-c639a1c0aee2}">
     <Declaration><![CDATA[VAR_GLOBAL
 {attribute 'pytmc' := '
@@ -31,6 +31,7 @@ TV2K3_VFS_01_Interface : FB_VFS_Interface;
 	.i_xVetoValveClosed :=
 '}
 TV2K3_VFS_01 : FB_VFS;
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

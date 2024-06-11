@@ -1,68 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{AA02E162-2EDB-46D3-8CFD-E3B4F2FAC0D1}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_VGC</Name>
 			<BitSize>16</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
 			<EnumInfo>
-				<Text>
-					<![CDATA[Vented]]>
-				</Text>
+				<Text><![CDATA[Vented]]></Text>
 				<Enum>0</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[AtVacuum]]>
-				</Text>
+				<Text><![CDATA[AtVacuum]]></Text>
 				<Enum>1</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[ERR_DiffPress]]>
-				</Text>
+				<Text><![CDATA[ERR_DiffPress]]></Text>
 				<Enum>2</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[ERR_LostVac]]>
-				</Text>
+				<Text><![CDATA[ERR_LostVac]]></Text>
 				<Enum>3</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[ERR_ExtFault]]>
-				</Text>
+				<Text><![CDATA[ERR_ExtFault]]></Text>
 				<Enum>4</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[At_Vac]]>
-				</Text>
+				<Text><![CDATA[At_Vac]]></Text>
 				<Enum>5</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[Triggered]]>
-				</Text>
+				<Text><![CDATA[Triggered]]></Text>
 				<Enum>6</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[Vac_Fault]]>
-				</Text>
+				<Text><![CDATA[Vac_Fault]]></Text>
 				<Enum>7</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[Cls_Timeout]]>
-				</Text>
+				<Text><![CDATA[Cls_Timeout]]></Text>
 				<Enum>8</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>
-					<![CDATA[Opn_Timeout]]>
-				</Text>
+				<Text><![CDATA[Opn_Timeout]]></Text>
 				<Enum>9</Enum>
 			</EnumInfo>
 		</DataType>
@@ -86,16 +66,14 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{AF9C11FC-61B1-484C-9302-3DB64FC0A315}" Name="txi_sxr_vac" PrjFilePath="..\..\txi_sxr_vac\txi_sxr_vac.plcproj" TmcFilePath="..\..\txi_sxr_vac\txi_sxr_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc" TmcHash="{17781D2E-B48C-444B-329F-0E23FA846398}">
 			<Name>txi_sxr_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
 				<Name>FSV_task Inputs</Name>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -108,9 +86,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO</Name>
-					<Comment>
-						<![CDATA[VETO Devices]]>
-					</Comment>
+					<Comment><![CDATA[VETO Devices]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -119,9 +95,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK</Name>
-					<Comment>
-						<![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]>
-					</Comment>
+					<Comment><![CDATA[To be linked to the Fast sensor structure signal IG.xPRESS_OK, to make sure that the device is connected]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -130,23 +104,17 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW</Name>
-					<Comment>
-						<![CDATA[external open signal e.g epics]]>
-					</Comment>
+					<Comment><![CDATA[external open signal e.g epics]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset</Name>
-					<Comment>
-						<![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]>
-					</Comment>
+					<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode</Name>
-					<Comment>
-						<![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]>
-					</Comment>
+					<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -154,7 +122,7 @@
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2">
+			<Vars VarGrpType="2" AreaNo="1">
 				<Name>FSV_task Outputs</Name>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_A</Name>
@@ -174,254 +142,184 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger</Name>
-					<Comment>
-						<![CDATA[Interface]]>
-					</Comment>
+					<Comment><![CDATA[Interface]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open</Name>
-					<Comment>
-						<![CDATA[Interface]]>
-					</Comment>
+					<Comment><![CDATA[Interface]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed</Name>
-					<Comment>
-						<![CDATA[Interface]]>
-					</Comment>
+					<Comment><![CDATA[Interface]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK</Name>
-					<Comment>
-						<![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]>
-					</Comment>
+					<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK</Name>
-					<Comment>
-						<![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]>
-					</Comment>
+					<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State</Name>
-					<Comment>
-						<![CDATA[Interface]]>
-					</Comment>
+					<Comment><![CDATA[Interface]]></Comment>
 					<Type GUID="{AA02E162-2EDB-46D3-8CFD-E3B4F2FAC0D1}" Namespace="LCLS_Vacuum">E_VGC</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="8">
+			<Vars VarGrpType="8" AreaNo="4">
 				<Name>FSV_task Retains</Name>
 				<Var>
 					<Name>PMPS_GVL.AccumulatedFF</Name>
-					<Comment>
-						<![CDATA[ Any time a FF occurs]]>
-					</Comment>
+					<Comment><![CDATA[ Any time a FF occurs]]></Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="1">
+			<Vars VarGrpType="1" ContextId="1" AreaNo="16">
 				<Name>PlcTask Inputs</Name>
 				<Var>
 					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
+					<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ Controls and I/Os]]>
-					</Comment>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xHV_ON</Name>
-					<Comment>
-						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_xDisc_Active</Name>
-					<Comment>
-						<![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]>
-					</Comment>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01.i_iPRESS_R</Name>
-					<Comment>
-						<![CDATA[ input Pressure // Link to analog Input]]>
-					</Comment>
+					<Comment><![CDATA[ input Pressure // Link to analog Input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -430,9 +328,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -441,9 +337,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -452,9 +346,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -463,9 +355,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -474,9 +364,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -485,9 +373,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -496,16 +382,12 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI</Name>
-					<Comment>
-						<![CDATA[ NO contact //function of relay set on the QPC to HV output state]]>
-					</Comment>
+					<Comment><![CDATA[ NO contact //function of relay set on the QPC to HV output state]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -514,9 +396,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -525,9 +405,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -536,9 +414,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -547,9 +423,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VALVES.fb_TV5K3_VGC_01.i_xOpnLS</Name>
-					<Comment>
-						<![CDATA[IO]]>
-					</Comment>
+					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -558,16 +432,12 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK</Name>
-					<Comment>
-						<![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]>
-					</Comment>
+					<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger</Name>
-					<Comment>
-						<![CDATA[inputs]]>
-					</Comment>
+					<Comment><![CDATA[inputs]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -580,117 +450,85 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK</Name>
-					<Comment>
-						<![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]>
-					</Comment>
+					<Comment><![CDATA[MPS Fault OK, is set when the Valve is Open and there is no trigger]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State</Name>
-					<Comment>
-						<![CDATA[Interface]]>
-					</Comment>
+					<Comment><![CDATA[Interface]]></Comment>
 					<Type GUID="{AA02E162-2EDB-46D3-8CFD-E3B4F2FAC0D1}" Namespace="LCLS_Vacuum">E_VGC</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="2">
+			<Vars VarGrpType="2" ContextId="1" AreaNo="17">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO</Name>
-					<Comment>
-						<![CDATA[ Enable High Voltage when TRUE]]>
-					</Comment>
+					<Comment><![CDATA[ Enable High Voltage when TRUE]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -719,16 +557,12 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.iq_stValve.xCLS_SW</Name>
-					<Comment>
-						<![CDATA[external open signal e.g epics]]>
-					</Comment>
+					<Comment><![CDATA[external open signal e.g epics]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK</Name>
-					<Comment>
-						<![CDATA[outputs]]>
-					</Comment>
+					<Comment><![CDATA[outputs]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -737,23 +571,17 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW</Name>
-					<Comment>
-						<![CDATA[external open signal e.g epics]]>
-					</Comment>
+					<Comment><![CDATA[external open signal e.g epics]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset</Name>
-					<Comment>
-						<![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]>
-					</Comment>
+					<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode</Name>
-					<Comment>
-						<![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]>
-					</Comment>
+					<Comment><![CDATA[To be linked to global override bit. This Overrides Vacuum logic only, EPS, MPS and PMPS are still enforces]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -762,9 +590,7 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO</Name>
-					<Comment>
-						<![CDATA[VETO Devices]]>
-					</Comment>
+					<Comment><![CDATA[VETO Devices]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -772,13 +598,11 @@
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
-			<Vars VarGrpType="8">
+			<Vars VarGrpType="8" ContextId="1" AreaNo="20">
 				<Name>PlcTask Retains</Name>
 				<Var>
 					<Name>PMPS_GVL.SuccessfulPreemption</Name>
-					<Comment>
-						<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
-					</Comment>
+					<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
@@ -800,6 +624,26 @@
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<Contexts>
+				<Context>
+					<Id NeedCalleeCall="true">0</Id>
+					<Name>FSV_task</Name>
+					<ManualConfig>
+						<OTCID>#x02010040</OTCID>
+					</ManualConfig>
+					<Priority>13</Priority>
+					<CycleTime>1000000</CycleTime>
+				</Context>
+				<Context>
+					<Id NeedCalleeCall="true">1</Id>
+					<Name>PlcTask</Name>
+					<ManualConfig>
+						<OTCID>#x02010030</OTCID>
+					</ManualConfig>
+					<Priority>20</Priority>
+					<CycleTime>10000000</CycleTime>
+				</Context>
+			</Contexts>
 			<TaskPouOids>
 				<TaskPouOid Prio="13" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502002"/>
@@ -809,10 +653,10 @@
 	<Mappings>
 		<OwnerA Name="txi_sxr_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI" VarB="PC1K3_PIP_01^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI" VarB="PC1K3_PIP_02^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI" VarB="ST1K3_PIP_01^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI" VarB="TV1K3_PIP_01^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI" VarB="PC1K3_PIP_01^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI" VarB="PC1K3_PIP_02^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.i_xSP_DI" VarB="ST1K3_PIP_01^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_xSP_DI" VarB="TV1K3_PIP_01^Input" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E11 (EL3064)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_iPRESS" VarB="TV2K3_PIP_01^Value" AutoLink="true"/>
@@ -820,55 +664,55 @@
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_iPRESS" VarB="TV4K3_PIP_01^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E12 (EL2794)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO" VarB="TV2K3_PIP_01^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO" VarB="TV3K3_PIP_01^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO" VarB="TV4K3_PIP_01^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.q_xHVEna_DO" VarB="TV2K3_PIP_01^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.q_xHVEna_DO" VarB="TV3K3_PIP_01^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.q_xHVEna_DO" VarB="TV4K3_PIP_01^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E13 (EL1004)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI" VarB="TV2K3_PIP_01^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI" VarB="TV3K3_PIP_01^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI" VarB="TV4K3_PIP_01^Input"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV2K3_PIP_01.i_xSP_DI" VarB="TV2K3_PIP_01^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV3K3_PIP_01.i_xSP_DI" VarB="TV3K3_PIP_01^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV4K3_PIP_01.i_xSP_DI" VarB="TV4K3_PIP_01^Input" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_PC1K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.i_iPRESS_R" VarB="PC1K3_GCC_01^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.i_iPRESS_R" VarB="PC1K3_GCC_02^Value"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP3 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS" VarB="PC1K3_GCC_01^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS" VarB="PC1K3_GCC_02^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_01.q_xHV_DIS" VarB="PC1K3_GCC_01^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_PC1K3_GCC_02.q_xHV_DIS" VarB="PC1K3_GCC_02^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP1(EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.i_iPRESS_R" VarB="TV1K3_GCC_01^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GPI_01.i_iPRESS_R" VarB="TV1K3_GPI_01^Value"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S23-PNL-1 EP2 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS" VarB="TV1K3_GCC_01^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV1K3_GCC_01.q_xHV_DIS" VarB="TV1K3_GCC_01^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP1 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV1K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP2 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.i_iPRESS_R" VarB="ST1L3_GCC_01^Value"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GPI_01.i_iPRESS_R" VarB="ST1K3_GPI_01^Value"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS" VarB="ST1K3_GCC_01^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS" VarB="ST1K3_GCC_01^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-DRL-01 (EK1100)^H1K3S01-DRL-01 E3 (EL1004)">
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-PNL-01 EP1 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV2K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-PNL-01 EP2 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
@@ -877,23 +721,23 @@
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-PNL-01 EP3 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS" VarB="Channel 4^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S03-PNL-01 EP1 (EP2338-0002)">
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VALVES.fb_TV4K3_VGC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S03-PNL-01 EP2 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S03-PNL-01 EP3 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E6 (EL1124)">
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xTrigger" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xTrigger" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_iPRESS" VarB="PC1K3_PIP_01^Value" AutoLink="true"/>
@@ -902,10 +746,10 @@
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.i_iPRESS" VarB="TV1K3_PIP_01^Value"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E9 (EL2794)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO" VarB="PC1K3_PIP_01^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO" VarB="PC1K3_PIP_02^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.q_xHVEna_DO" VarB="ST1K3_PIP_01^Output"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.q_xHVEna_DO" VarB="TV1K3_PIP_01^Output"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.q_xHVEna_DO" VarB="PC1K3_PIP_01^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.q_xHVEna_DO" VarB="PC1K3_PIP_02^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_ST1K3_PIP_01.q_xHVEna_DO" VarB="ST1K3_PIP_01^Output" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_PUMPS.fb_TV1K3_PIP_01.q_xHVEna_DO" VarB="TV1K3_PIP_01^Output" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^txi_sxr_vac^txi_sxr_vac Instance">
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" AutoLink="true"/>
@@ -920,18 +764,18 @@
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" AutoLink="true" PeerAutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_TXI_VAC_GAUGES" Id="{5dee7415-fe65-440d-a495-853084bfeb20}">
     <Declaration><![CDATA[VAR_GLOBAL
-
 //B940-008-K0S15-PNL-02 (FEE)
 {attribute 'pytmc' := ' pv: TXI:PC1K3:GCC:01 '}
 {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP2 (EP3174-0002)^PC1K3_GCC_01^Value  '}
@@ -55,7 +54,7 @@ fb_TV3K3_GPI_01: FB_MKS275;
                                  .q_xHV_DIS			:=	TIIB[H1K3S03-PNL-01 EP3 (EP2624-0002)]^Channel 2^Output
 '}
 fb_TV4K3_GCC_01: FB_MKS500;
-{attribute 'pytmc' := ' pv: TXI:TV3K3:GPI:01 '}
+{attribute 'pytmc' := ' pv: TXI:TV4K3:GPI:01 '}
 {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S03-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value   '}
 fb_TV4K3_GPI_01: FB_MKS275;
 

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_TXI_VAC_VALVES" Id="{49153936-06c3-4261-b5ef-2e49a6d9a655}">
     <Declaration><![CDATA[VAR_GLOBAL
+	
 //FEE Valves
 {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 1^Input;
                              .i_xClsLS	:=	TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K0S15-PNL-02 EP1 (EP2338-0002)^Channel 2^Input;

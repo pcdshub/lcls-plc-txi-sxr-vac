@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_TXI_VAC_VALVES" Id="{4c9a7319-3f14-4d3b-bb2f-4b6392242f38}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_TXI_VAC_VALVES
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fb_PC1K3_VGC_01(
+      <ST><![CDATA[//FEE
+fb_PC1K3_VGC_01(
     i_stUSG := fb_PC1K3_PIP_02.q_IG,
     i_stDSG := fb_PC1K3_PIP_01.q_IG,
     i_xDis_DPIlk := FALSE,
@@ -29,7 +30,7 @@ fb_TV1K3_VGC_01(
     io_fbFFHWO := g_FastFaultOutput1,
     fbArbiter := fbArbiter1
 );
-
+//H1
 fb_TV2K3_VGC_01(
     i_stUSG := fb_ST1K3_PIP_01.q_IG,
     i_stDSG := fb_TV2K3_PIP_01.q_IG,
@@ -54,6 +55,7 @@ fb_TV4K3_VGC_01(
     fbArbiter := fbArbiter1
 );
 
+//H2
 fb_TV5K3_VGC_01(
     i_stUSG := fb_TV4K3_GCC_01.IG,
     i_stDSG := fb_TV4K3_GCC_01.IG,
