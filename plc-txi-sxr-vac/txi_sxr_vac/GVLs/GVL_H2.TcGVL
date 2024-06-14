@@ -5,7 +5,7 @@
 VAR_GLOBAL
 	
 //B950-1.2-PNL temp (H1.2)
-{attribute 'pytmc' := ' pv: TXI:TV4K3:GCC:01 '}
+{attribute 'pytmc' := ' pv: TXI:TV5K3:GCC:01 '}
 {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H2K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value;
                                  .q_xHV_DIS			:=	TIIB[H2K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 1^Output
 '}
