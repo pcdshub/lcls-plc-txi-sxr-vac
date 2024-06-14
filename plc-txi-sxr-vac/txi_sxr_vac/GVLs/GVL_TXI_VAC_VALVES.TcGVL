@@ -29,13 +29,7 @@ fb_TV2K3_VGC_01 : FB_VGC;
 '}
 fb_TV4K3_VGC_01 : FB_VGC;
 
-//H1.2 Valves
-{attribute 'pytmc' := ' pv: TV5K3:VGC:01 '}
-{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
-                             .i_xClsLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
-                             .q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
-'}
-fb_TV5K3_VGC_01 : FB_VGC;
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

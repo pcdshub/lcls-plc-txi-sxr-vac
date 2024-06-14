@@ -24,6 +24,10 @@
     <Compile Include="FSV_task.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GVLs\GVL_H2.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="GVLs\GVL_TXI_VAC_GAUGES.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -47,7 +51,13 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\FB_MPA.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_H2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_TXI_VAC_GAUGES.TcPOU">
@@ -77,6 +87,10 @@
     <PlaceholderReference Include="LCLS Vacuum">
       <DefaultResolution>LCLS Vacuum, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>LCLS_Vacuum</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="lcls-twincat-motion">
+      <DefaultResolution>lcls-twincat-motion, * (SLAC)</DefaultResolution>
+      <Namespace>lcls_twincat_motion</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="PMPS">
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>

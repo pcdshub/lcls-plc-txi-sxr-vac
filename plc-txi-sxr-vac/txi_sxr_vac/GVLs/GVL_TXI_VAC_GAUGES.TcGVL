@@ -33,14 +33,14 @@ fb_ST1K3_GPI_01: FB_MKS275;
 //B950-100H1-K3S1-PNL-1 (H1.1)
 {attribute 'pytmc' := ' pv: TXI:TV2K3:GCC:01 '}
 {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 2^Value;
-                                 .q_xHV_DIS			:=	TIIB[H1K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 1^Output
+                                 .q_xHV_DIS			:=	TIIB[H1K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 2^Output
 '}
 fb_TV2K3_GCC_01: FB_MKS500;
 {attribute 'pytmc' := ' pv: TXI:TV2K3:GPI:01 '}
 {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value   '}
 fb_TV2K3_GPI_01: FB_MKS275;
 {attribute 'pytmc' := ' pv: TXI:TV3K3:GCC:01 '}
-{attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 2^Value;
+{attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H1K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 4^Value;
                                  .q_xHV_DIS			:=	TIIB[H1K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 4^Output
 '}
 fb_TV3K3_GCC_01: FB_MKS500;
@@ -57,6 +57,16 @@ fb_TV4K3_GCC_01: FB_MKS500;
 {attribute 'pytmc' := ' pv: TXI:TV4K3:GPI:01 '}
 {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:= TIIB[H1K3S03-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value   '}
 fb_TV4K3_GPI_01: FB_MKS275;
+
+
+{attribute 'pytmc' := ' pv: TXI:TV4K3:GFS:01 '}
+{attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[E1 (EL3064)]^AI Standard Channel 1^Value;
+                                 .q_xHV_DIS			:=	TIIB[E3 (EL2794)]^Channel 1^Output
+'}
+fb_TV4K3_GFS_01: FB_MKS422;
+
+
+
 
 END_VAR]]></Declaration>
   </GVL>

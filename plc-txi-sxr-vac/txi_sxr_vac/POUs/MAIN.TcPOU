@@ -10,6 +10,9 @@ END_VAR
 PRG_TXI_VAC_PUMPS();
 PRG_TXI_VAC_VALVES();
 fbLogHandler();
+
+//
+PRG_H2();
 ]]></ST>
     </Implementation>
   </POU>

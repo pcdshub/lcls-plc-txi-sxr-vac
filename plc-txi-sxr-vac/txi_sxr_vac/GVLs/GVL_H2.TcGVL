@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_H2" Id="{45677a91-ce8d-47af-9ea9-69b52081a055}">
+    <Declaration><![CDATA[
+VAR_GLOBAL
+	
+//B950-1.2-PNL temp (H1.2)
+{attribute 'pytmc' := ' pv: TXI:TV4K3:GCC:01 '}
+{attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[H2K3S01-PNL-01 EP2 (EP3174-0002)]^AI Standard Channel 1^Value;
+                                 .q_xHV_DIS			:=	TIIB[H2K3S01-PNL-01 EP3 (EP2624-0002)]^Channel 1^Output
+'}
+fb_TV5K3_GCC_01: FB_MKS500;
+
+
+//H1.2 Valves
+{attribute 'pytmc' := ' pv: TV5K3:VGC:01 '}
+{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 1^Input;
+                             .i_xClsLS	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 2^Input;
+                             .q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 11^Output
+'}
+fb_TV5K3_VGC_01 : FB_VGC;
+
+{attribute 'pytmc' := ' pv: YAGK3:MPA:01 '}
+{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 13^Output
+'}
+YAGK3_01:FB_MPA;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

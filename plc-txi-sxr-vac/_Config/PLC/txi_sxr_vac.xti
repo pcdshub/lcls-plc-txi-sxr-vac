@@ -66,7 +66,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{AF9C11FC-61B1-484C-9302-3DB64FC0A315}" Name="txi_sxr_vac" PrjFilePath="..\..\txi_sxr_vac\txi_sxr_vac.plcproj" TmcFilePath="..\..\txi_sxr_vac\txi_sxr_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc" TmcHash="{17781D2E-B48C-444B-329F-0E23FA846398}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc" TmcHash="{0A830255-3896-5998-3EB8-F5B0DCEEBF59}">
 			<Name>txi_sxr_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -422,15 +422,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_TV5K3_VGC_01.i_xOpnLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_TV5K3_VGC_01.i_xClsLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK</Name>
 					<Comment><![CDATA[Valve Vacuum OK, is set to False when there is Vacuum Fault]]></Comment>
 					<Type>BOOL</Type>
@@ -457,6 +448,44 @@
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State</Name>
 					<Comment><![CDATA[Interface]]></Comment>
 					<Type GUID="{AA02E162-2EDB-46D3-8CFD-E3B4F2FAC0D1}" Namespace="LCLS_Vacuum">E_VGC</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_GCC_01.i_iPRESS_R</Name>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_GCC_01.i_xHV_ON</Name>
+					<Comment><![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_GCC_01.i_xDisc_Active</Name>
+					<Comment><![CDATA[ Discharge Current Active // 'TcLinkTo' (EL1124) ^Input]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GFS_01.i_iPRESS_R</Name>
+					<Comment><![CDATA[ Controls and I/Os]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_VGC_01.i_xOpnLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_VGC_01.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.YAGK3_01.i_xInsertedLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.YAGK3_01.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2" ContextId="1" AreaNo="17">
@@ -548,10 +577,6 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_TXI_VAC_VALVES.fb_TV5K3_VGC_01.q_xOPN_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_TXI_VAC_VARIABLES.g_FastFaultOutput1.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -595,6 +620,32 @@
 				</Var>
 				<Var>
 					<Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_GCC_01.q_xHV_DIS</Name>
+					<Comment><![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TXI_VAC_GAUGES.fb_TV4K3_GFS_01.q_xHV_DIS</Name>
+					<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>PRG_H2.g_FastFaultOutputNA.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.fb_TV5K3_VGC_01.q_xOPN_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.YAGK3_01.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_H2.YAGK3_01.q_xRetract_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -652,6 +703,9 @@
 	</Project>
 	<Mappings>
 		<OwnerA Name="txi_sxr_vac Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E1 (EL3064)">
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GFS_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E10 (EL1004)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_01.i_xSP_DI" VarB="PC1K3_PIP_01^Input" Size="1"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_PUMPS.fb_PC1K3_PIP_02.i_xSP_DI" VarB="PC1K3_PIP_02^Input" Size="1"/>
@@ -705,6 +759,10 @@
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E16 (EK1122)^K3S34-PNL-1 EP3 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_ST1K3_GCC_01.q_xHV_DIS" VarB="ST1K3_GCC_01^Output" Size="1"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-DRL-01 (EK1100)^H1K3S01-DRL-01 E1 (EL2202)">
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_A" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_B" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-DRL-01 (EK1100)^H1K3S01-DRL-01 E3 (EL1004)">
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xClsLS" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOpnLS" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
@@ -717,11 +775,11 @@
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-PNL-01 EP2 (EP3174-0002)">
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-PNL-01 EP3 (EP2624-0002)">
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV2K3_GCC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV3K3_GCC_01.q_xHV_DIS" VarB="Channel 4^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S03-PNL-01 EP1 (EP2338-0002)">
@@ -735,6 +793,9 @@
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S03-PNL-01 EP3 (EP2624-0002)">
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GCC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E3 (EL2794)">
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_GAUGES.fb_TV4K3_GFS_01.q_xHV_DIS" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E6 (EL1124)">
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xTrigger" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
