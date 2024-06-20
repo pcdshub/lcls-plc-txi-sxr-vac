@@ -4,6 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_H2
 VAR
 	g_FastFaultOutputNA  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1');
+	fbArbiter1NA : FB_Arbiter(0);
 	gpi_NA : ST_VG;
 END_VAR
 ]]></Declaration>
@@ -23,8 +24,8 @@ fb_TV5K3_VGC_01(
     i_xPMPS_OK := TRUE,
     i_xExt_OK := ,
     i_xOverrideMode := xSystemOverrideMode1,
-    io_fbFFHWO := g_FastFaultOutput1,
-    fbArbiter := fbArbiter1
+    io_fbFFHWO := g_FastFaultOutputNA,
+    fbArbiter := fbArbiter1NA
 );
     
 fb_TV5K3_GCC_01(PG := gpi_NA, bEP := TRUE);

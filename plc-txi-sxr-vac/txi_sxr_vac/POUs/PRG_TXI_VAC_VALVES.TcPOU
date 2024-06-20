@@ -15,8 +15,8 @@ fb_PC1K3_VGC_01(
     i_xPMPS_OK := TRUE,
     i_xExt_OK := TRUE,
     i_xOverrideMode := xSystemOverrideMode1,
-    io_fbFFHWO := g_FastFaultOutput1,
-    fbArbiter := fbArbiter1
+    io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+    fbArbiter := GVL_PMPS.fbArbiter1
 );
 
 fb_TV1K3_VGC_01(
@@ -27,8 +27,8 @@ fb_TV1K3_VGC_01(
     i_xPMPS_OK := TRUE,
     i_xExt_OK := TRUE,
     i_xOverrideMode := xSystemOverrideMode1,
-    io_fbFFHWO := g_FastFaultOutput1,
-    fbArbiter := fbArbiter1
+    io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+    fbArbiter := GVL_PMPS.fbArbiter1
 );
 //H1
 fb_TV2K3_VGC_01(
@@ -39,8 +39,8 @@ fb_TV2K3_VGC_01(
     i_xPMPS_OK := TRUE,
     i_xExt_OK := TRUE,
     i_xOverrideMode := xSystemOverrideMode1,
-    io_fbFFHWO := g_FastFaultOutput1,
-    fbArbiter := fbArbiter1
+    io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+    fbArbiter := GVL_PMPS.fbArbiter1
 );
 
 fb_TV4K3_VGC_01(
@@ -51,8 +51,8 @@ fb_TV4K3_VGC_01(
     i_xPMPS_OK := TRUE,
     i_xExt_OK := TRUE,
     i_xOverrideMode := xSystemOverrideMode1,
-    io_fbFFHWO := g_FastFaultOutput1,
-    fbArbiter := fbArbiter1
+    io_fbFFHWO := GVL_PMPS.g_FastFaultOutput1,
+    fbArbiter := GVL_PMPS.fbArbiter1
 );
 
 

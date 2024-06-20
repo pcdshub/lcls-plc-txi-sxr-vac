@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_PMPS" Id="{b84dea55-5b52-40eb-8f1a-0d90375bdbc2}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_PMPS
+VAR
+    fbArbiterIO: FB_SubSysToArbiter_IO;
+	
+	{attribute 'TcLinkTo' := 'TIIB[PMPS_PRE]^IO Outputs^FFO'}
+	FFO AT %Q*:BOOL; //temp code until faults are in MPS crate
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[GVL_PMPS.g_FastFaultOutput1.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                       OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]);
+GVL_PMPS.g_FastFaultOutput2.Execute(i_xVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                       OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT]); // Currenlty these valves are permenantly vetoed
+
+//Code for Requesting full beam arbitration
+GVL_PMPS.fbArbiter1.AddRequest(nReqID := 16#FAF8, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'plc-kfe-txi-vac');
+fbArbiterIO(
+    i_bVeto := (PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT])
+                                       OR PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K3_IN]
+                                      AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.K_Stopper.MR1K1_OUT],
+    Arbiter:=GVL_PMPS.fbArbiter1,
+    fbFFHWO:=GVL_PMPS.g_FastFaultOutput1);
+	
+	
+//TEMP FFO to arbiter
+FFO:= GVL_PMPS.g_FastFaultOutput1.q_xFastFaultOut AND GVL_PMPS.g_FastFaultOutput2.q_xFastFaultOut;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -21,7 +21,7 @@ fb_TV5K3_GCC_01: FB_MKS500;
 fb_TV5K3_VGC_01 : FB_VGC;
 
 {attribute 'pytmc' := ' pv: YAGK3:MPA:01 '}
-{attribute 'TcLinkTo' := 	'.q_xOPN_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 13^Output
+{attribute 'TcLinkTo' := 	'.q_xInsert_DO	:=	TIIB[H2K3S01-PNL-01 EP1 (EP2338-0002)]^Channel 13^Output
 '}
 YAGK3_01:FB_MPA;
 
