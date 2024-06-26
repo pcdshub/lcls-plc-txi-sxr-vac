@@ -168,7 +168,7 @@ ACT_IO();]]></ST>
       <Implementation>
         <ST><![CDATA[(*Inputs*)
 stPneumaticActuator.i_bInLimitSwitch :=  q_xInsert_DO;
-stPneumaticActuator.i_bOutLimitSwitch := q_xRetract_DO;
+stPneumaticActuator.i_bOutLimitSwitch := NOT q_xInsert_DO;
 
 (*outputs*)
 q_xInsert_DO:=stPneumaticActuator.q_bInsert;
