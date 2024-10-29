@@ -14,7 +14,7 @@ TV2K3_VFS_01(
     i_xExt_OK:= TRUE,
     i_sDevName:= 'TV2K3:VFS:01',
     io_fbFFHWO:= GVL_PMPS.g_FastFaultOutput2
-	);
+    );
 ]]></ST>
     </Implementation>
   </POU>

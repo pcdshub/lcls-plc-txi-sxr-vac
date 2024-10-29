@@ -58,7 +58,7 @@ fb_TV4K3_VGC_01(
 
 
 // VFS ValvesK3
-TV2K3_VFS_01_Interface(IG := fb_TV4K3_GCC_01.IG(*fb_TV4K3_GFS_01.IG*));]]></ST>
+TV2K3_VFS_01_Interface(IG := fb_TV4K3_GFS_01.IG);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

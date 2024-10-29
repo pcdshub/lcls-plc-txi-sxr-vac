@@ -3,9 +3,9 @@
   <POU Name="PRG_H2" Id="{7bcf1bd0-6d25-4875-9ecf-1c65770eae9e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_H2
 VAR
-	g_FastFaultOutputNA  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1');
-	fbArbiter1NA : FB_Arbiter(0);
-	gpi_NA : ST_VG;
+    g_FastFaultOutputNA  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1');
+    fbArbiter1NA : FB_Arbiter(0);
+    gpi_NA : ST_VG;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -27,22 +27,22 @@ fb_TV5K3_VGC_01(
     io_fbFFHWO := g_FastFaultOutputNA,
     fbArbiter := fbArbiter1NA
 );
-    
+
 fb_TV5K3_GCC_01(PG := gpi_NA, bEP := TRUE);
 
 
 YAGK3_01(
-	ibInsertOK:= TRUE, 
-	ibRetractOK:= TRUE, 
-	ibPMPS_OK:=TRUE , 
-	ibSingleCntrl:= TRUE, 
-	ibCntrlHold:=TRUE , 
-	ibOverrideInterlock:= , 
-	i_xReset:= , 
-	i_xAutoReset:= , 
-	stPneumaticActuator=> , 
-	xMPS_OK=> , 
-	io_fbFFHWO:= g_FastFaultOutputNA);]]></ST>
+    ibInsertOK:= TRUE,
+    ibRetractOK:= TRUE,
+    ibPMPS_OK:=TRUE ,
+    ibSingleCntrl:= TRUE,
+    ibCntrlHold:=TRUE ,
+    ibOverrideInterlock:= ,
+    i_xReset:= ,
+    i_xAutoReset:= ,
+    stPneumaticActuator=> ,
+    xMPS_OK=> ,
+    io_fbFFHWO:= g_FastFaultOutputNA);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
