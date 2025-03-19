@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_TXI_VAC_VARIABLES" Id="{99fa0854-e0c4-4ebb-be84-cb1442f0b632}">
     <Declaration><![CDATA[VAR_GLOBAL
 {attribute 'pytmc' := 'pv: TXI:SXR:FEE:VAC:OVRDON;
@@ -9,15 +9,9 @@
 '}
 xSystemOverrideMode1 : BOOL; (* Global system override for the prototype section*)
 
-{attribute 'pytmc' := ' pv: PLC:TXI:VAC:FFO:01 '}
-{attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO (EL2202)]^Channel 1^Output'}
-g_FastFaultOutput1  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1'); // change i_sNetID ??
-
-{attribute 'pytmc' := ' pv: PLC:TXI:VAC:ARB:01 '}
-fbArbiter1 : FB_Arbiter(1);
-
 fbLogHandler : FB_loghandler;
-
+{attribute 'TcLinkTo' := 'TIIB[E3 (EL2794)]^Channel 4^Output'}
+qPC1K3_PIP_01_Press_OK AT %Q*:BOOL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

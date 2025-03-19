@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="MAIN" Id="{aaba3096-245a-4ba7-8aa0-ff7e8fb88c30}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
@@ -9,6 +9,12 @@ END_VAR
       <ST><![CDATA[PRG_TXI_VAC_GAUGES();
 PRG_TXI_VAC_PUMPS();
 PRG_TXI_VAC_VALVES();
+PRG_PMPS();
+fbLogHandler();
+
+
+//
+PRG_H2();
 ]]></ST>
     </Implementation>
   </POU>

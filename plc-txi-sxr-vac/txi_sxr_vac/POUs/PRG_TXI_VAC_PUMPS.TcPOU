@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="PRG_TXI_VAC_PUMPS" Id="{582ff63e-8787-478b-bcea-9d2bdf315108}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_TXI_VAC_PUMPS
 VAR
@@ -8,6 +8,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[//beamline dummy gauge
+
 dummy_gauge.xPRESS_OK := TRUE;
 dummy_gauge.xAT_VAC := TRUE;
 dummy_gauge.eState := ValidLo;
@@ -18,6 +19,7 @@ fb_TV1K3_PIP_01(i_stGauge := fb_TV1K3_GPI_01.PG, i_xOverrideMode := xSystemOverr
 fb_ST1K3_PIP_01(i_stGauge := fb_ST1K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
 fb_PC1K3_PIP_01(i_stGauge := dummy_gauge, i_xOverrideMode := xSystemOverrideMode1);
 fb_PC1K3_PIP_02(i_stGauge := fb_PC1K3_GCC_02.PG, i_xOverrideMode := xSystemOverrideMode1);
+qPC1K3_PIP_01_Press_OK := fb_PC1K3_PIP_02.q_IG.xPRESS_OK;
 
 //B940-009-R17-PCI-02
 //fb_TV2K3_PIP_01(i_stGauge := fb_TV2K3_GPI_01.PG, i_xOverrideMode := xSystemOverrideMode1);
