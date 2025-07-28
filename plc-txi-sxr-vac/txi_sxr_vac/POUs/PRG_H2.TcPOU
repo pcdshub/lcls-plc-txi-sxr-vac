@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_H2" Id="{7bcf1bd0-6d25-4875-9ecf-1c65770eae9e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_H2
+VAR
+    g_FastFaultOutputNA  :   FB_HardwareFFOutput:= (i_sNetID:='172.21.42.126.1.1');
+    fbArbiter1NA : FB_Arbiter(0);
+    gpi_NA : ST_VG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+gpi_NA.xPRESS_OK := TRUE;
+gpi_NA.xAT_VAC := TRUE;
+gpi_NA.eState := ValidLo;
+gpi_NA.rPRESS := 1e-4;
+
+//H2
+fb_TV5K3_VGC_01(
+    i_stUSG := fb_TV4K3_GCC_01.IG,
+    i_stDSG := fb_TV5K3_GCC_01.IG,
+    i_xDis_DPIlk := FALSE,
+    i_xEPS_OK := TRUE,
+    i_xPMPS_OK := TRUE,
+    i_xExt_OK := TRUE ,
+    i_xOverrideMode := xSystemOverrideMode1,
+    io_fbFFHWO := g_FastFaultOutputNA,
+    fbArbiter := fbArbiter1NA
+);
+
+fb_TV5K3_GCC_01(PG := gpi_NA, bEP := TRUE);
+
+
+YAGK3_01(
+    ibInsertOK:= TRUE,
+    ibRetractOK:= TRUE,
+    ibPMPS_OK:=TRUE ,
+    ibSingleCntrl:= TRUE,
+    ibCntrlHold:=TRUE ,
+    ibOverrideInterlock:= ,
+    i_xReset:= ,
+    i_xAutoReset:= ,
+    stPneumaticActuator=> ,
+    xMPS_OK=> ,
+    io_fbFFHWO:= g_FastFaultOutputNA);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
