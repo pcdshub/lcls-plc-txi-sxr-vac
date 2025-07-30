@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{81F740BF-29F7-A20A-B7AB-0DC2A663889A}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{79F735F6-4377-36EB-FD58-8C1B8BD92586}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="LCLS_General.Tc2_Utilities">E_HashPrefixTypes</Name>
@@ -53939,20 +53939,6 @@ for FAST shutter control</Comment>
     .i_xClsLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 1^Input;
     .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;;
     .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input;
-    .i_xPress_OK		:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK;
-    .i_xOPN_SW			:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW;
-    .i_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW;
-    .i_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset;
-    .i_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode;
-    .i_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen;
-    .q_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger;
-    .q_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open;
-    .q_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed;
-    .q_xVAC_FAULT_OK	:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK;
-    .q_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK;
-    .q_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State;
-    .i_xVetoValveOpenDO := ;
-    .i_xVetoValveClosed :=
 </Value>
               </Property>
               <Property>
@@ -62265,6 +62251,23 @@ for FAST shutter control</Comment>
 </Value>
               </Property>
               <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.q_xPress_OK		:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK;
+                                 .q_xOPN_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW;
+                                 .q_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW;
+                                 .q_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset;
+                                 .q_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode;
+                                 .q_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen;
+                                 .i_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger;
+                                 .i_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open;
+                                 .i_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed;
+                                 .i_xVAC_FAULT_OK	:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK;
+                                 .i_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK;
+                                 .i_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State;
+                                 .q_xVetoValveOpenDO := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO;
+                                 .q_xVetoValveClosed := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed </Value>
+              </Property>
+              <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
@@ -63119,7 +63122,7 @@ for FAST shutter control</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-03-19T10:25:40</Value>
+          <Value>2025-07-30T15:03:42</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
