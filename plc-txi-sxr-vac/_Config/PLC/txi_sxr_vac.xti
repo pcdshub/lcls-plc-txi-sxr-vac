@@ -343,7 +343,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{AF9C11FC-61B1-484C-9302-3DB64FC0A315}" Name="txi_sxr_vac" PrjFilePath="..\..\txi_sxr_vac\txi_sxr_vac.plcproj" TmcFilePath="..\..\txi_sxr_vac\txi_sxr_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc" TmcHash="{81F740BF-29F7-A20A-B7AB-0DC2A663889A}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc" TmcHash="{79F735F6-4377-36EB-FD58-8C1B8BD92586}">
 			<Name>txi_sxr_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1170,30 +1170,34 @@
 				<Link VarA="PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP" VarB="IO Outputs^RequestedBP" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIPC^txi_sxr_vac^txi_sxr_vac Instance">
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" AutoLink="true"/>
-				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" AutoLink="true"/>
-				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" AutoLink="true" PeerAutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open" VarB="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
