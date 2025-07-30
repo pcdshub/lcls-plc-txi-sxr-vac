@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="GVL_TXI_VAC_PUMPS" Id="{e367e0c2-c1cf-4d17-8bd9-180985d15113}">
     <Declaration><![CDATA[VAR_GLOBAL
-
 //B940-009-R17-PCI-01
 {attribute 'pytmc' := ' pv: TXI:TV1K3:PIP:01 '}
 {attribute 'TcLinkTo' := 	'.i_iPRESS		:= TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E8 (EL3064)^TV1K3_PIP_01^Value  ';
