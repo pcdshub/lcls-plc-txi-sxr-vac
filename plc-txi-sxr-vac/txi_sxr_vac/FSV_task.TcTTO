@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1">
   <Task Name="FSV_task" Id="{2ec1e11c-2e49-45ef-b070-6a7c96e2b11e}">
     <!--CycleTime in micro seconds.-->
     <CycleTime>1000</CycleTime>

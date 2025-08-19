@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <GVL Name="GVL_TXI_VAC_GAUGES" Id="{5dee7415-fe65-440d-a495-853084bfeb20}">
     <Declaration><![CDATA[VAR_GLOBAL
 //B940-008-K0S15-PNL-02 (FEE)

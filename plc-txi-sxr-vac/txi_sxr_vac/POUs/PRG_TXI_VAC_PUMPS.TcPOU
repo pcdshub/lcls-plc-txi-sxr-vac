@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="PRG_TXI_VAC_PUMPS" Id="{582ff63e-8787-478b-bcea-9d2bdf315108}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_TXI_VAC_PUMPS
 VAR
