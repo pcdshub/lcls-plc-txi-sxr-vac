@@ -27,8 +27,8 @@ TV2K3_VFS_01_Interface : FB_VFS_Interface;
     .q_xClose_C	:=	TIIB[H1K3S01-DRL-01 E2 (EL2202)]^Channel 1^Output;
     .q_xOPN_DO	:=	TIIB[H1K3S01-DRL-01 E2 (EL2202)]^Channel 2^Output;
     .i_xClsLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 1^Input;
-    .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;;
-    .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input;
+    .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;
+    .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input
 '}
 TV2K3_VFS_01 : FB_VFS;
 
