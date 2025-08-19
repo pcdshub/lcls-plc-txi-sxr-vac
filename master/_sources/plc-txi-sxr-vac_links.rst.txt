@@ -32,6 +32,8 @@ Links
         txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK, TIPC^txi_sxr_vac^txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK
         txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xTrigger, TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E6 (EL1124), Channel 1^Input
         txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset, TIPC^txi_sxr_vac^txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset
+        txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed, TIPC^txi_sxr_vac^txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed
+        txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO, TIPC^txi_sxr_vac^txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO
         txi_sxr_vac Instance, FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State, TIPC^txi_sxr_vac^txi_sxr_vac Instance, PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State
         txi_sxr_vac Instance, FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_A, TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-DRL-01 (EK1100)^H1K3S01-DRL-01 E1 (EL2202), Channel 1^Output
         txi_sxr_vac Instance, FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_B, TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^E17 (EK1122)^H1K3S01-DRL-01 (EK1100)^H1K3S01-DRL-01 E1 (EL2202), Channel 2^Output
@@ -120,5 +122,7 @@ Links
         txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen, TIPC^txi_sxr_vac^txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen
         txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK, TIPC^txi_sxr_vac^txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK
         txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset, TIPC^txi_sxr_vac^txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset
+        txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed, TIPC^txi_sxr_vac^txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed
+        txi_sxr_vac Instance, PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO, TIPC^txi_sxr_vac^txi_sxr_vac Instance, FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO
         txi_sxr_vac Instance, PlcTask Outputs^PRG_PMPS.FFO, TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^PMPS_PRE, IO Outputs^FFO
         txi_sxr_vac Instance, PlcTask Outputs^PRG_PMPS.fbArbiterIO.q_stRequestedBP, TIID^Device 1 (EtherCAT)^Term 30 (EK1200)^PMPS_PRE, IO Outputs^RequestedBP
