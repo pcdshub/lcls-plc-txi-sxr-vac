@@ -322,7 +322,7 @@
 		</DataType>
 	</DataTypes>
 	<Project GUID="{AF9C11FC-61B1-484C-9302-3DB64FC0A315}" Name="txi_sxr_vac" PrjFilePath="..\..\txi_sxr_vac\txi_sxr_vac.plcproj" TmcFilePath="..\..\txi_sxr_vac\txi_sxr_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{DE9427DF-3D35-53C5-3945-9F0F783F7A22}" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{1AD9E2BE-E316-03E4-B325-4F107608B646}" TmcPath="txi_sxr_vac\txi_sxr_vac.tmc">
 			<Name>txi_sxr_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" ContextId="1" AreaNo="20">
@@ -336,7 +336,6 @@
 				<Var>
 					<Name>PMPS_GVL.BP_jsonDoc</Name>
 					<Type>SJsonValue</Type>
-					<BitSize>32</BitSize>
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
@@ -1146,6 +1145,8 @@
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" AutoLink="true"/>
 				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" AutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO" VarB="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO" AutoLink="true" PeerAutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK" AutoLink="true"/>
 				<Link VarA="FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger" VarB="PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger" AutoLink="true"/>
@@ -1164,6 +1165,8 @@
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen" AutoLink="true" PeerAutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK" AutoLink="true" PeerAutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset" AutoLink="true" PeerAutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveClosed" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVetoValveOpenDO" VarB="FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

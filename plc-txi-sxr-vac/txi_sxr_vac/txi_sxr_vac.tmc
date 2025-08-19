@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{DE9427DF-3D35-53C5-3945-9F0F783F7A22}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance2" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{1AD9E2BE-E316-03E4-B325-4F107608B646}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}" TcBaseType="true" CName="TcEventSeverity*" RemovableEnumPrefix="TCEVENTSEVERITY_">TcEventSeverity</Name>
@@ -9970,7 +9970,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </Properties>
     </DataType>
     <DataType>
-      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Name>
+      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <Properties>
@@ -9998,7 +9998,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </SubItem>
       <SubItem>
         <Name>StoringTestSuiteResultNumber</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <Comment> Misc variables </Comment>
         <BitSize>16</BitSize>
         <BitOffs>621296192</BitOffs>
@@ -10023,7 +10023,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </SubItem>
       <SubItem>
         <Name>NumberOfTestsToAnalyse</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>621296400</BitOffs>
       </SubItem>
@@ -10059,7 +10059,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </Properties>
     </DataType>
     <DataType>
-      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
+      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <Properties>
@@ -10090,7 +10090,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </SubItem>
       <SubItem>
         <Name>PrintingTestSuiteResultNumber</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>192</BitOffs>
       </SubItem>
@@ -10128,12 +10128,12 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>TestsInTestSuiteCounter</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
           <Name>MaxNumberOfTestsToPrint</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -11066,7 +11066,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
       </SubItem>
       <SubItem>
         <Name>WritingTestSuiteResultNumber</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>530752</BitOffs>
       </SubItem>
@@ -11465,21 +11465,6 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         <Property>
           <Name>PouType</Name>
           <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
-      <BitSize>16</BitSize>
-      <BaseType>UINT</BaseType>
-      <Properties>
-        <Property>
-          <Name>LowerBorder</Name>
-          <Value>1</Value>
-        </Property>
-        <Property>
-          <Name>UpperBorder</Name>
-          <Value>100</Value>
         </Property>
       </Properties>
     </DataType>
@@ -13637,7 +13622,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -15242,7 +15227,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -15867,7 +15852,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -16345,7 +16330,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -16729,7 +16714,7 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -17263,6 +17248,21 @@ The Fast shutter was tested with PLC task Cycle Base Time 50us with cycle time 0
         </Property>
         <Property>
           <Name>reflection</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
+      <BitSize>16</BitSize>
+      <BaseType>UINT</BaseType>
+      <Properties>
+        <Property>
+          <Name>LowerBorder</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>UpperBorder</Name>
+          <Value>100</Value>
         </Property>
       </Properties>
     </DataType>
@@ -25697,21 +25697,6 @@ These features aren't disabled, they just aren't used, think child/parent classe
       </Properties>
     </DataType>
     <DataType>
-      <Name>USINT (USINT#1..255)</Name>
-      <BitSize>8</BitSize>
-      <BaseType>USINT</BaseType>
-      <Properties>
-        <Property>
-          <Name>LowerBorder</Name>
-          <Value>1</Value>
-        </Property>
-        <Property>
-          <Name>UpperBorder</Name>
-          <Value>255</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name Namespace="lcls_twincat_motion.Tc3_IPCDiag">E_IPCDiag_Datatype</Name>
       <Comment> parameter datatype 1..15</Comment>
       <BitSize>8</BitSize>
@@ -27375,7 +27360,7 @@ These features aren't disabled, they just aren't used, think child/parent classe
         </Parameter>
         <Local>
           <Name>nParameterIdx</Name>
-          <Type>USINT (USINT#1..255)</Type>
+          <Type>USINT (1..255)</Type>
           <BitSize>8</BitSize>
         </Local>
         <Local>
@@ -62940,6 +62925,23 @@ for FAST shutter control</Comment>
    pv: TV2K3:VFS:01
 </Value>
           </Property>
+          <Property>
+            <Name>TcLinkTo</Name>
+            <Value>.q_xPress_OK		:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK;
+                                 .q_xOPN_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW;
+                                 .q_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW;
+                                 .q_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset;
+                                 .q_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode;
+                                 .q_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen;
+                                 .i_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger;
+                                 .i_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open;
+                                 .i_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed;
+                                 .i_xVAC_FAULT_OK	:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK;
+                                 .i_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK;
+                                 .i_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State;
+                                 .q_xVetoValveOpenDO := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO;
+                                 .q_xVetoValveClosed := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed </Value>
+          </Property>
         </Properties>
       </SubItem>
       <SubItem>
@@ -62957,20 +62959,6 @@ for FAST shutter control</Comment>
     .i_xClsLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 1^Input;
     .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;;
     .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input;
-    .i_xPress_OK		:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK;
-    .i_xOPN_SW			:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW;
-    .i_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW;
-    .i_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset;
-    .i_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode;
-    .i_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen;
-    .q_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger;
-    .q_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open;
-    .q_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed;
-    .q_xVAC_FAULT_OK	:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK;
-    .q_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK;
-    .q_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State;
-    .i_xVetoValveOpenDO := ;
-    .i_xVetoValveClosed :=
 </Value>
           </Property>
         </Properties>
@@ -63016,7 +63004,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>FSV_task Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOpnLS</Name>
             <Comment>IO</Comment>
@@ -63094,7 +63082,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>FSV_task Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xClose_A</Name>
             <BitSize>8</BitSize>
@@ -63166,7 +63154,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>FSV_task Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>GVL_Logger.bTrickleTripped</Name>
             <Comment> Global trickle trip flag</Comment>
@@ -63334,20 +63322,6 @@ for FAST shutter control</Comment>
     .i_xClsLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 1^Input;
     .i_xOpnLS	:=	TIIB[H1K3S01-DRL-01 E3 (EL1004)]^Channel 2^Input;;
     .i_xTrigger :=  TIIB[E6 (EL1124)]^Channel 1^Input;
-    .i_xPress_OK		:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xPRESS_OK;
-    .i_xOPN_SW			:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOPN_SW;
-    .i_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xCLS_SW;
-    .i_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xVAC_FAULT_Reset;
-    .i_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideMode;
-    .i_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.q_xOverrideOpen;
-    .q_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xTrigger;
-    .q_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Open;
-    .q_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVFS_Closed;
-    .q_xVAC_FAULT_OK	:= TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xVAC_FAULT_OK;
-    .q_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_xMPS_OK;
-    .q_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^PlcTask Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01_Interface.i_eVFS_State;
-    .i_xVetoValveOpenDO := ;
-    .i_xVetoValveClosed :=
 </Value>
               </Property>
               <Property>
@@ -63424,7 +63398,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">4</AreaNo>
           <Name>FSV_task Retains</Name>
           <ContextId>0</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.AccumulatedFF</Name>
             <Comment> Any time a FF occurs</Comment>
@@ -63449,7 +63423,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">16</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>PRG_PMPS.fbArbiterIO.i_stCurrentBP</Name>
             <BitSize>1760</BitSize>
@@ -63931,7 +63905,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">17</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>PRG_PMPS.FFO</Name>
             <Comment>temp code until faults are in MPS crate</Comment>
@@ -64253,7 +64227,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -73666,6 +73640,23 @@ for FAST shutter control</Comment>
 </Value>
               </Property>
               <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.q_xPress_OK		:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xPress_OK;
+                                 .q_xOPN_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOPN_SW;
+                                 .q_xCLS_SW			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xCLS_SW;
+                                 .q_xVAC_FAULT_Reset:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVAC_FAULT_Reset;
+                                 .q_xOverrideMode	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideMode;
+                                 .q_xOverrideOpen	:= 	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xOverrideOpen;
+                                 .i_xTrigger		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xTrigger;
+                                 .i_xVFS_Open		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Open;
+                                 .i_xVFS_Closed		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVFS_Closed;
+                                 .i_xVAC_FAULT_OK	:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xVAC_FAULT_OK;
+                                 .i_xMPS_OK			:=  TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_xMPS_OK;
+                                 .i_eVFS_State		:=	TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Outputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.q_eVFS_State;
+                                 .q_xVetoValveOpenDO := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveOpenDO;
+                                 .q_xVetoValveClosed := TIPC^txi_sxr_vac^txi_sxr_vac Instance^FSV_task Inputs^GVL_TXI_VAC_VFS.TV2K3_VFS_01.i_xVetoValveClosed </Value>
+              </Property>
+              <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
@@ -73743,7 +73734,7 @@ for FAST shutter control</Comment>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">20</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>1</ContextId>
-          <ByteSize>97845248</ByteSize>
+          <ByteSize>97910784</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -73810,7 +73801,7 @@ for FAST shutter control</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-07-29T14:48:19</Value>
+          <Value>2025-08-19T10:11:38</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
